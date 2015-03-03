@@ -11,8 +11,32 @@
 
 @interface ATERichContent : NSObject
 
+/**
+ * @property
+ * mRichContentType
+ * @brief The string that identifies one of the types
+ * avialables for a ATERichContentView component. You can
+ * find this possible values at ATERichContentConstants.h
+ * with preffix "kATERichContentComponentType***" where
+ * xxx represents an available ATE-local type.
+ */
 @property (nonatomic, strong) NSString *mRichContentType;
+
+/**
+ * @property
+ * mRichContentHeight
+ * @brief Height for the component. If no height / wrap_content
+ * is specfied the system decides the default height
+ */
 @property (nonatomic, assign) CGFloat mRichContentHeight;
+
+/**
+ * @property
+ * mRichContentDatas
+ * @brief Generic object that represents the datas
+ * that the ATERichContentView component will use to paint
+ * the information
+ */
 @property (nonatomic, strong) NSObject *mRichContentDatas;
 
 @end

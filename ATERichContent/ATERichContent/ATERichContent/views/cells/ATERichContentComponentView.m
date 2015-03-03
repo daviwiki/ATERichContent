@@ -14,6 +14,10 @@
     return 0;
 }
 
+- (BOOL) validateContent:(NSObject *) content {
+    return NO;
+}
+
 - (void) showContent:(NSObject *) content {
     
 }

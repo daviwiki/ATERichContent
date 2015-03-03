@@ -7,9 +7,12 @@
 //
 
 #import "ATERichContentHelper.h"
+#import "ATERichContentComponent.h"
 #import "ATERichContentConstants.h"
 #import "ATERichContentComponentView.h"
+
 #import "ATERichContentComponentLabel.h"
+#import "ATERichContentComponentImage.h"
 
 static ATERichContentHelper *stInstance;
 
@@ -33,13 +36,33 @@ static ATERichContentHelper *stInstance;
 
 #pragma mark - ---- Services
 - (void) initializeHelper {
+    // Add default components to matrix
     self.mViewAliases = [[NSMutableDictionary alloc] init];
-    self.mViewAliases[kATERichContentComponentLabel] = NSStringFromClass([ATERichContentComponentLabel class]);
+    
+    ATERichContentComponent *c = nil;
+    NSString *className = nil;
+    NSString *alias = nil;
+    
+    alias = kATERichContentComponentTypeLabel;
+    className = NSStringFromClass([ATERichContentComponentLabel class]);
+    c = [ATERichContentComponent getComponentWithName:className
+                                                 type:ATERichContentComponentTypeNib
+                                                alias:alias
+                                              reuseId:className];
+    self.mViewAliases[alias] = c;
+    
+    alias = kATERichContentComponentTypeImage;
+    className = NSStringFromClass([ATERichContentComponentImage class]);
+    c = [ATERichContentComponent getComponentWithName:className
+                                                 type:ATERichContentComponentTypeNib
+                                                alias:alias
+                                              reuseId:className];
+    self.mViewAliases[alias] = c;
 }
 
-- (BOOL) addRichViewClassName:(NSString *) className forAlias:(NSString *) alias {
-    if (!className || !alias) {
-        [self log:@"No className or alias defined"];
+- (BOOL) addRichViewClassName:(NSString *) className forAlias:(NSString *) alias reuseId:(NSString *)reuseId {
+    if (!className || !alias || !reuseId) {
+        [self log:@"No className, alias or reuseId defined"];
         return NO;
     }
     
@@ -52,6 +75,38 @@ static ATERichContentHelper *stInstance;
         return NO;
     }
     
+    ATERichContentComponent *c = [ATERichContentComponent getComponentWithName:className
+                                                                          type:ATERichContentComponentTypeClass
+                                                                         alias:alias
+                                                                       reuseId:reuseId];
+    self.mViewAliases[alias] = c;
+    
+    return YES;
+}
+
+- (BOOL) addRichViewNibName:(NSString *) nibName atBundle:(NSBundle *) bundle forAlias:(NSString *) alias reuseId:(NSString *) reuseId {
+    if (!nibName || !alias || !reuseId) {
+        [self log:@"No nibname, alias or reuseId defined"];
+        return NO;
+    }
+    
+    UINib *nib = [UINib nibWithNibName:nibName bundle:bundle];
+    if (!nib) {
+        [self log:@"No nib defined with this name"];
+        return NO;
+    }
+    
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] firstObject];
+    if ([view.class isSubclassOfClass:[ATERichContentComponentView class]]) {
+        [self log:@"The class specified not inherits from ATERichContentComponentView"];
+        return NO;
+    }
+    
+    ATERichContentComponent *c = [ATERichContentComponent getComponentWithName:nibName
+                                                                          type:ATERichContentComponentTypeNib
+                                                                         alias:alias
+                                                                       reuseId:reuseId];
+    self.mViewAliases[alias] = c;
     return YES;
 }
 
@@ -60,7 +115,7 @@ static ATERichContentHelper *stInstance;
 #pragma mark - -------------------- LIFECICLE ---------------------
 + (ATERichContentHelper *) getInstance {
     if (!stInstance) {
-        stInstance = [[ATERichContentHelper alloc] init];
+        stInstance = [ATERichContentHelper alloc];
         [stInstance initializeHelper];
     }
     return stInstance;

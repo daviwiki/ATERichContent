@@ -10,12 +10,12 @@
 
 CGFloat kATERichContentWrapContentHeight = -1;
 
-NSString *kATERichContentComponentLabel = @"TXT";
-NSString *kATERichContentComponentAttributtedLabel = @"ATXT";
-NSString *kATERichContentComponentImage = @"IMG";
-NSString *kATERichContentComponentPhotoGallery = @"PHOTOGAL";
-NSString *kATERichContentComponentWebview = @"WEB";
-NSString *kATERichContentComponentMap = @"MAP";
+NSString *kATERichContentComponentTypeLabel = @"TXT";
+NSString *kATERichContentComponentTypeAttributtedLabel = @"ATXT";
+NSString *kATERichContentComponentTypeImage = @"IMG";
+NSString *kATERichContentComponentTypePhotoGallery = @"PHOTOGAL";
+NSString *kATERichContentComponentTypeWebview = @"WEB";
+NSString *kATERichContentComponentTypeMap = @"MAP";
 
 @implementation ATERichContentConstants
 

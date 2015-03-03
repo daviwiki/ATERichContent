@@ -9,21 +9,25 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_OPTIONS(NSInteger, ATERichContentComponentType) {
+    ATERichContentComponentTypeClass = 0,
+    ATERichContentComponentTypeNib = 0,
+};
+
 ///
-/// VALUES
+/// ATARichContentView Properties
 ///
 extern CGFloat kATERichContentWrapContentHeight;
 
 ///
-/// VIEW TYPES
+/// ATERichContentView Types
 ///
-extern NSString *kATERichContentComponentLabel;
-extern NSString *kATERichContentComponentAttributtedLabel;
-extern NSString *kATERichContentComponentImage;
-extern NSString *kATERichContentComponentPhotoGallery;
-extern NSString *kATERichContentComponentWebview;
-extern NSString *kATERichContentComponentMap;
+extern NSString *kATERichContentComponentTypeLabel;
+extern NSString *kATERichContentComponentTypeAttributtedLabel;
+extern NSString *kATERichContentComponentTypeImage;
+extern NSString *kATERichContentComponentTypePhotoGallery;
+extern NSString *kATERichContentComponentTypeWebview;
+extern NSString *kATERichContentComponentTypeMap;
 
 @interface ATERichContentConstants : NSObject
-
 @end

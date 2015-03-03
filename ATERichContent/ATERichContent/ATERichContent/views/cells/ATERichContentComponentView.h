@@ -10,8 +10,21 @@
 
 @interface ATERichContentComponentView : UICollectionViewCell
 
+@property (nonatomic, weak) IBOutlet UIView *mBackgroundView;
+
+/**
+ * @function
+ */
 + (CGFloat) getWrapContentHeight;
 
+/**
+ * @function
+ */
+- (BOOL) validateContent:(NSObject *) content;
+
+/**
+ * @function
+ */
 - (void) showContent:(NSObject *) content;
 
 @end

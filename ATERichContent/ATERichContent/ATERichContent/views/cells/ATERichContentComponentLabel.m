@@ -7,15 +7,40 @@
 //
 
 #import "ATERichContentComponentLabel.h"
+#import "ATERichContentHelper.h"
+
+@interface ATERichContentComponentLabel ()
+
+@property (nonatomic, strong) NSString *mContent;
+
+@end
 
 @implementation ATERichContentComponentLabel
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - ---- Internal
+- (void) drawContent:(NSString *) content {
+    self.mTextLabel.text = content;
+    [self layoutIfNeeded];
 }
-*/
+
+#pragma mark - ---- Services
+#pragma mark - ---- Overrides
++ (CGFloat) getWrapContentHeight {
+    
+}
+
+- (BOOL) validateContent:(NSObject *)content {
+    return [[content class] isSubclassOfClass:[NSString class]];
+}
+
+- (void) showContent:(NSObject *)content {
+    if (![self validateContent:content]) {
+        [[ATERichContentHelper getInstance] log:@"Invalid class type excepected for content into ATERichContentComponentLabel class"];
+        return;
+    }
+    
+    self.mContent = (NSString *) content;
+    [self drawContent:self.mContent];
+}
 
 @end

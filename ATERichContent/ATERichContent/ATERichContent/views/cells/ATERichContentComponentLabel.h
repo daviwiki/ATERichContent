@@ -10,4 +10,6 @@
 
 @interface ATERichContentComponentLabel : ATERichContentComponentView
 
+@property (nonatomic, weak) IBOutlet UILabel *mTextLabel;
+
 @end

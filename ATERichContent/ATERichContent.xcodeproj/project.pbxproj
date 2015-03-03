@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460524B81AA6336D00DE30AF /* ATERichContentComponentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524B71AA6336D00DE30AF /* ATERichContentComponentImage.m */; };
+		460524BB1AA6388500DE30AF /* ATERichContentComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524BA1AA6388500DE30AF /* ATERichContentComponent.m */; };
+		460524BD1AA63BF800DE30AF /* ATERichContentComponentLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460524BC1AA63BF800DE30AF /* ATERichContentComponentLabel.xib */; };
+		460524C01AA63E0700DE30AF /* ATERichContentComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524BF1AA63E0700DE30AF /* ATERichContentComponentView.m */; };
 		4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE891AA4DBFF00AE3A2B /* main.m */; };
 		4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8C1AA4DBFF00AE3A2B /* AppDelegate.m */; };
 		4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8F1AA4DBFF00AE3A2B /* ViewController.m */; };
@@ -15,7 +19,6 @@
 		4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4632BE961AA4DBFF00AE3A2B /* LaunchScreen.xib */; };
 		4632BEA41AA4DBFF00AE3A2B /* ATERichContentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEA31AA4DBFF00AE3A2B /* ATERichContentTests.m */; };
 		4632BEB21AA4DCAA00AE3A2B /* ATERichContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEB11AA4DCAA00AE3A2B /* ATERichContent.m */; };
-		4632BEB51AA4DCD200AE3A2B /* ATERichContentComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEB41AA4DCD200AE3A2B /* ATERichContentComponentView.m */; };
 		4632BEB81AA4DCE200AE3A2B /* ATERichContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEB71AA4DCE200AE3A2B /* ATERichContentView.m */; };
 		4632BEBC1AA4DE6100AE3A2B /* ATERichContentComponentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEBB1AA4DE6100AE3A2B /* ATERichContentComponentLabel.m */; };
 		4632BEC01AA4DE8900AE3A2B /* ATERichContentConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEBF1AA4DE8900AE3A2B /* ATERichContentConstants.m */; };
@@ -33,6 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460524B61AA6336D00DE30AF /* ATERichContentComponentImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponentImage.h; sourceTree = "<group>"; };
+		460524B71AA6336D00DE30AF /* ATERichContentComponentImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponentImage.m; sourceTree = "<group>"; };
+		460524B91AA6388500DE30AF /* ATERichContentComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponent.h; sourceTree = "<group>"; };
+		460524BA1AA6388500DE30AF /* ATERichContentComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponent.m; sourceTree = "<group>"; };
+		460524BC1AA63BF800DE30AF /* ATERichContentComponentLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERichContentComponentLabel.xib; sourceTree = "<group>"; };
+		460524BE1AA63E0700DE30AF /* ATERichContentComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponentView.h; sourceTree = "<group>"; };
+		460524BF1AA63E0700DE30AF /* ATERichContentComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponentView.m; sourceTree = "<group>"; };
 		4632BE841AA4DBFF00AE3A2B /* ATERichContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATERichContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4632BE881AA4DBFF00AE3A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4632BE891AA4DBFF00AE3A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,8 +58,6 @@
 		4632BEA31AA4DBFF00AE3A2B /* ATERichContentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATERichContentTests.m; sourceTree = "<group>"; };
 		4632BEB01AA4DCAA00AE3A2B /* ATERichContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContent.h; sourceTree = "<group>"; };
 		4632BEB11AA4DCAA00AE3A2B /* ATERichContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContent.m; sourceTree = "<group>"; };
-		4632BEB31AA4DCD200AE3A2B /* ATERichContentComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponentView.h; sourceTree = "<group>"; };
-		4632BEB41AA4DCD200AE3A2B /* ATERichContentComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponentView.m; sourceTree = "<group>"; };
 		4632BEB61AA4DCE100AE3A2B /* ATERichContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentView.h; sourceTree = "<group>"; };
 		4632BEB71AA4DCE200AE3A2B /* ATERichContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentView.m; sourceTree = "<group>"; };
 		4632BEBA1AA4DE6100AE3A2B /* ATERichContentComponentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponentLabel.h; sourceTree = "<group>"; };
@@ -154,8 +162,6 @@
 				4632BEB91AA4DCE600AE3A2B /* cells */,
 				4632BEB61AA4DCE100AE3A2B /* ATERichContentView.h */,
 				4632BEB71AA4DCE200AE3A2B /* ATERichContentView.m */,
-				4632BEB31AA4DCD200AE3A2B /* ATERichContentComponentView.h */,
-				4632BEB41AA4DCD200AE3A2B /* ATERichContentComponentView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 			children = (
 				4632BEB01AA4DCAA00AE3A2B /* ATERichContent.h */,
 				4632BEB11AA4DCAA00AE3A2B /* ATERichContent.m */,
+				460524B91AA6388500DE30AF /* ATERichContentComponent.h */,
+				460524BA1AA6388500DE30AF /* ATERichContentComponent.m */,
 			);
 			path = beans;
 			sourceTree = "<group>";
@@ -172,8 +180,13 @@
 		4632BEB91AA4DCE600AE3A2B /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				460524BE1AA63E0700DE30AF /* ATERichContentComponentView.h */,
+				460524BF1AA63E0700DE30AF /* ATERichContentComponentView.m */,
 				4632BEBA1AA4DE6100AE3A2B /* ATERichContentComponentLabel.h */,
 				4632BEBB1AA4DE6100AE3A2B /* ATERichContentComponentLabel.m */,
+				460524BC1AA63BF800DE30AF /* ATERichContentComponentLabel.xib */,
+				460524B61AA6336D00DE30AF /* ATERichContentComponentImage.h */,
+				460524B71AA6336D00DE30AF /* ATERichContentComponentImage.m */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -271,6 +284,7 @@
 			files = (
 				4632BE931AA4DBFF00AE3A2B /* Main.storyboard in Resources */,
 				4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */,
+				460524BD1AA63BF800DE30AF /* ATERichContentComponentLabel.xib in Resources */,
 				4632BE951AA4DBFF00AE3A2B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,10 +307,12 @@
 				4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */,
 				4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */,
 				4632BEB21AA4DCAA00AE3A2B /* ATERichContent.m in Sources */,
+				460524C01AA63E0700DE30AF /* ATERichContentComponentView.m in Sources */,
+				460524BB1AA6388500DE30AF /* ATERichContentComponent.m in Sources */,
 				4632BEB81AA4DCE200AE3A2B /* ATERichContentView.m in Sources */,
 				4632BEC01AA4DE8900AE3A2B /* ATERichContentConstants.m in Sources */,
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
-				4632BEB51AA4DCD200AE3A2B /* ATERichContentComponentView.m in Sources */,
+				460524B81AA6336D00DE30AF /* ATERichContentComponentImage.m in Sources */,
 				4632BEBC1AA4DE6100AE3A2B /* ATERichContentComponentLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +506,7 @@
 				4632BEA91AA4DBFF00AE3A2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4632BEAA1AA4DBFF00AE3A2B /* Build configuration list for PBXNativeTarget "ATERichContentTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +515,7 @@
 				4632BEAC1AA4DBFF00AE3A2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
