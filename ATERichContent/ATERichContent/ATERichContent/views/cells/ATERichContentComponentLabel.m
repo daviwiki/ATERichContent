@@ -26,7 +26,7 @@
 #pragma mark - ---- Services
 #pragma mark - ---- Overrides
 + (CGFloat) getWrapContentHeight {
-    
+    return 0;
 }
 
 - (BOOL) validateContent:(NSObject *)content {
