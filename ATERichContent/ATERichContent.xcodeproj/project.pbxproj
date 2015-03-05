@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		460524B81AA6336D00DE30AF /* ATERichContentComponentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524B71AA6336D00DE30AF /* ATERichContentComponentImage.m */; };
-		460524BB1AA6388500DE30AF /* ATERichContentComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524BA1AA6388500DE30AF /* ATERichContentComponent.m */; };
 		460524BD1AA63BF800DE30AF /* ATERichContentComponentLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460524BC1AA63BF800DE30AF /* ATERichContentComponentLabel.xib */; };
 		460524C01AA63E0700DE30AF /* ATERichContentComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524BF1AA63E0700DE30AF /* ATERichContentComponentView.m */; };
 		4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE891AA4DBFF00AE3A2B /* main.m */; };
@@ -23,6 +22,11 @@
 		4632BEBC1AA4DE6100AE3A2B /* ATERichContentComponentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEBB1AA4DE6100AE3A2B /* ATERichContentComponentLabel.m */; };
 		4632BEC01AA4DE8900AE3A2B /* ATERichContentConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEBF1AA4DE8900AE3A2B /* ATERichContentConstants.m */; };
 		4632BEC31AA4E5D100AE3A2B /* ATERichContentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEC21AA4E5D100AE3A2B /* ATERichContentHelper.m */; };
+		468D06B71AA8BFD800DF59B2 /* ATERichContentComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06B61AA8BFD800DF59B2 /* ATERichContentComponent.m */; };
+		468D06BA1AA8C00C00DF59B2 /* ATERichContentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06B91AA8C00C00DF59B2 /* ATERichContentLabel.m */; };
+		468D06BD1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06BC1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.m */; };
+		468D06C01AA8C06800DF59B2 /* ATERichContentImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06BF1AA8C06800DF59B2 /* ATERichContentImage.m */; };
+		468D06C31AA8C07800DF59B2 /* ATERichContentGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06C21AA8C07800DF59B2 /* ATERichContentGallery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,6 @@
 /* Begin PBXFileReference section */
 		460524B61AA6336D00DE30AF /* ATERichContentComponentImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponentImage.h; sourceTree = "<group>"; };
 		460524B71AA6336D00DE30AF /* ATERichContentComponentImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponentImage.m; sourceTree = "<group>"; };
-		460524B91AA6388500DE30AF /* ATERichContentComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponent.h; sourceTree = "<group>"; };
-		460524BA1AA6388500DE30AF /* ATERichContentComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponent.m; sourceTree = "<group>"; };
 		460524BC1AA63BF800DE30AF /* ATERichContentComponentLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERichContentComponentLabel.xib; sourceTree = "<group>"; };
 		460524BE1AA63E0700DE30AF /* ATERichContentComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponentView.h; sourceTree = "<group>"; };
 		460524BF1AA63E0700DE30AF /* ATERichContentComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponentView.m; sourceTree = "<group>"; };
@@ -66,6 +68,16 @@
 		4632BEBF1AA4DE8900AE3A2B /* ATERichContentConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentConstants.m; sourceTree = "<group>"; };
 		4632BEC11AA4E5D100AE3A2B /* ATERichContentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentHelper.h; sourceTree = "<group>"; };
 		4632BEC21AA4E5D100AE3A2B /* ATERichContentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentHelper.m; sourceTree = "<group>"; };
+		468D06B51AA8BFD800DF59B2 /* ATERichContentComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentComponent.h; sourceTree = "<group>"; };
+		468D06B61AA8BFD800DF59B2 /* ATERichContentComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentComponent.m; sourceTree = "<group>"; };
+		468D06B81AA8C00C00DF59B2 /* ATERichContentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentLabel.h; sourceTree = "<group>"; };
+		468D06B91AA8C00C00DF59B2 /* ATERichContentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentLabel.m; sourceTree = "<group>"; };
+		468D06BB1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentAttributtedLabel.h; sourceTree = "<group>"; };
+		468D06BC1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentAttributtedLabel.m; sourceTree = "<group>"; };
+		468D06BE1AA8C06800DF59B2 /* ATERichContentImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentImage.h; sourceTree = "<group>"; };
+		468D06BF1AA8C06800DF59B2 /* ATERichContentImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentImage.m; sourceTree = "<group>"; };
+		468D06C11AA8C07800DF59B2 /* ATERichContentGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERichContentGallery.h; sourceTree = "<group>"; };
+		468D06C21AA8C07800DF59B2 /* ATERichContentGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERichContentGallery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +161,8 @@
 		4632BEAD1AA4DC0800AE3A2B /* ATERichContent */ = {
 			isa = PBXGroup;
 			children = (
-				4632BEAF1AA4DC6F00AE3A2B /* beans */,
+				468D06B41AA8BF9200DF59B2 /* beansCompontent */,
+				4632BEAF1AA4DC6F00AE3A2B /* beansContents */,
 				4632BEBD1AA4DE6700AE3A2B /* helpers */,
 				4632BEAE1AA4DC4700AE3A2B /* views */,
 			);
@@ -166,14 +179,21 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		4632BEAF1AA4DC6F00AE3A2B /* beans */ = {
+		4632BEAF1AA4DC6F00AE3A2B /* beansContents */ = {
 			isa = PBXGroup;
 			children = (
 				4632BEB01AA4DCAA00AE3A2B /* ATERichContent.h */,
 				4632BEB11AA4DCAA00AE3A2B /* ATERichContent.m */,
-				460524B91AA6388500DE30AF /* ATERichContentComponent.h */,
-				460524BA1AA6388500DE30AF /* ATERichContentComponent.m */,
+				468D06B81AA8C00C00DF59B2 /* ATERichContentLabel.h */,
+				468D06B91AA8C00C00DF59B2 /* ATERichContentLabel.m */,
+				468D06BB1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.h */,
+				468D06BC1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.m */,
+				468D06BE1AA8C06800DF59B2 /* ATERichContentImage.h */,
+				468D06BF1AA8C06800DF59B2 /* ATERichContentImage.m */,
+				468D06C11AA8C07800DF59B2 /* ATERichContentGallery.h */,
+				468D06C21AA8C07800DF59B2 /* ATERichContentGallery.m */,
 			);
+			name = beansContents;
 			path = beans;
 			sourceTree = "<group>";
 		};
@@ -200,6 +220,15 @@
 				4632BEC21AA4E5D100AE3A2B /* ATERichContentHelper.m */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		468D06B41AA8BF9200DF59B2 /* beansCompontent */ = {
+			isa = PBXGroup;
+			children = (
+				468D06B51AA8BFD800DF59B2 /* ATERichContentComponent.h */,
+				468D06B61AA8BFD800DF59B2 /* ATERichContentComponent.m */,
+			);
+			path = beansCompontent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,12 +333,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4632BEC31AA4E5D100AE3A2B /* ATERichContentHelper.m in Sources */,
+				468D06BD1AA8C03900DF59B2 /* ATERichContentAttributtedLabel.m in Sources */,
+				468D06C31AA8C07800DF59B2 /* ATERichContentGallery.m in Sources */,
 				4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */,
+				468D06B71AA8BFD800DF59B2 /* ATERichContentComponent.m in Sources */,
 				4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */,
 				4632BEB21AA4DCAA00AE3A2B /* ATERichContent.m in Sources */,
+				468D06C01AA8C06800DF59B2 /* ATERichContentImage.m in Sources */,
 				460524C01AA63E0700DE30AF /* ATERichContentComponentView.m in Sources */,
-				460524BB1AA6388500DE30AF /* ATERichContentComponent.m in Sources */,
 				4632BEB81AA4DCE200AE3A2B /* ATERichContentView.m in Sources */,
+				468D06BA1AA8C00C00DF59B2 /* ATERichContentLabel.m in Sources */,
 				4632BEC01AA4DE8900AE3A2B /* ATERichContentConstants.m in Sources */,
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
 				460524B81AA6336D00DE30AF /* ATERichContentComponentImage.m in Sources */,

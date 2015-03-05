@@ -30,13 +30,4 @@
  */
 @property (nonatomic, assign) CGFloat mRichContentHeight;
 
-/**
- * @property
- * mRichContentDatas
- * @brief Generic object that represents the datas
- * that the ATERichContentView component will use to paint
- * the information
- */
-@property (nonatomic, strong) NSObject *mRichContentDatas;
-
 @end

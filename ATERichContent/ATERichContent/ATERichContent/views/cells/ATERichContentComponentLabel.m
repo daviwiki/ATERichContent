@@ -9,6 +9,8 @@
 #import "ATERichContentComponentLabel.h"
 #import "ATERichContentHelper.h"
 
+static ATERichContentComponentLabel *stDummyInstance;
+
 @interface ATERichContentComponentLabel ()
 
 @property (nonatomic, strong) NSString *mContent;
@@ -26,6 +28,13 @@
 #pragma mark - ---- Services
 #pragma mark - ---- Overrides
 + (CGFloat) getWrapContentHeight {
+//    if (!stDummyInstance) {
+//        NSString *className = NSStringFromClass([ATERichContentComponentLabel class]);
+//        stDummyInstance = [[[NSBundle mainBundle] loadNibNamed:className owner:nil options:nil] firstObject];
+//    }
+//    
+//    stDummyInstance
+    
     return 0;
 }
 
