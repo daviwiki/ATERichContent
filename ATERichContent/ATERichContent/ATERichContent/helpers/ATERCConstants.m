@@ -17,6 +17,8 @@ NSString *kATERCTypePhotoGallery = @"PHOTOGAL";
 NSString *kATERCTypeWebview = @"WEB";
 NSString *kATERCTypeMap = @"MAP";
 
+NSString *kATERCNewAliasIncludedNotificationKey = @"kATERCNewAliasIncludedKey";
+
 @implementation ATERCConstants
 
 @end

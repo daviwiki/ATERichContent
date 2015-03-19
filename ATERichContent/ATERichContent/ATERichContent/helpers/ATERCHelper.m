@@ -7,8 +7,10 @@
 //
 
 #import "ATERCHelper.h"
+#import "ATERCManager.h"
 #import "ATERCComponent.h"
 #import "ATERCView.h"
+#import "ATERC.h"
 
 static NSMutableDictionary *stAliasToClassRelations = nil;
 
@@ -53,6 +55,10 @@ static NSMutableDictionary *stAliasToClassRelations = nil;
 #pragma mark - ---- Services
 + (NSNumber *) getHeightForContent:(ATERC *) content
                       andComponent:(ATERCComponent *) compontent {
+    if (content.mRichContentHeight != kATERCWrapContentHeight) {
+        return @(content.mRichContentHeight);
+    }
+    
     if (compontent.mType == ATERCComponentTypeClass) {
         return [ATERCHelper getClassHeightForContent:content andClassName:compontent.mName];
     }
@@ -69,6 +75,16 @@ static NSMutableDictionary *stAliasToClassRelations = nil;
     } else if (compontent.mType == ATERCComponentTypeNib) {
         UINib *nib = [UINib nibWithNibName:compontent.mName bundle:compontent.mBundle];
         return (ATERCView *)[[nib instantiateWithOwner:nil options:nil] firstObject];
+    }
+    return nil;
+}
+
++ (ATERCComponent *) getComponentForAlias:(NSString *) alias
+                                 intoList:(NSArray *) components {
+    for (ATERCComponent *c in components) {
+        if ([c.mAlias isEqualToString:alias]) {
+            return c;
+        }
     }
     return nil;
 }

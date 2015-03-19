@@ -25,12 +25,12 @@ static ATERCLabelView *stDummyInstance;
 #pragma mark - ---- Internal
 - (void) drawContent:(NSString *) content {
     self.mTextLabel.text = content;
-    [self layoutIfNeeded];
 }
 
 #pragma mark - ---- Services
 #pragma mark - ---- Overrides
-+ (NSNumber *) getHeightForContent:(ATERC *)content andComponent:(ATERCComponent *)compontent {
++ (NSNumber *) getHeightForContent:(ATERC *)content
+                      andComponent:(ATERCComponent *)compontent {
     if (!stDummyInstance) {
         stDummyInstance = (ATERCLabelView *)[ATERCHelper getViewForCompontent:compontent];
     }

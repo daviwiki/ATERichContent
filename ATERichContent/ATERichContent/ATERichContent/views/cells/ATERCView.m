@@ -15,15 +15,7 @@
 @implementation ATERCView
 
 + (NSNumber *) getHeightForContent:(ATERC *) content
-                      andComponent:(ATERCComponent *) compontent {
-    if (content == nil || compontent == nil) {
-        return @(0);
-    }
-    
-    if (content.mRichContentHeight != kATERCWrapContentHeight) {
-        return @(content.mRichContentHeight);
-    }
-    
+                      andComponent:(ATERCComponent *) compontent {    
     return @(0);
 }
 

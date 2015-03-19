@@ -15,7 +15,7 @@
  * @property
  * mRichContentType
  * @brief The string that identifies one of the types
- * avialables for a ATERichContentView component. You can
+ * avialables for a ATERCView component. You can
  * find this possible values at ATERichContentConstants.h
  * with preffix "kATERCCompontentType***" where
  * xxx represents an available ATE-local type.

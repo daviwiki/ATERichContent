@@ -85,6 +85,11 @@ static ATERCManager *stInstance;
     }
     
     self.mViewAliases[component.mAlias] = component;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kATERCNewAliasIncludedNotificationKey
+                                                        object:nil
+                                                      userInfo:@{kATERCNewAliasIncludedNotificationKey:component}];
+    
     return YES;
 }
 
@@ -105,6 +110,10 @@ static ATERCManager *stInstance;
     c.mReuseId = reuseId;
     c.mBundle = bundle;
     return [self addRichViewComponent:c];
+}
+
+- (NSDictionary *) getAvailableCompontents {
+    return self.mViewAliases;
 }
 
 - (void) setEnableLogs:(BOOL) enableLogs {

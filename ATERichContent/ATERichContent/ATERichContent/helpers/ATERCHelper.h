@@ -34,4 +34,13 @@
  */
 + (ATERCView *) getViewForCompontent:(ATERCComponent *) compontent;
 
+/**
+ * @function
+ * getComponentForAlias:intoList:
+ * @brief <p> Return the component for the alias given or nil
+ * if alias not found </p>
+ */
++ (ATERCComponent *) getComponentForAlias:(NSString *) alias
+                                 intoList:(NSArray *) components;
+
 @end

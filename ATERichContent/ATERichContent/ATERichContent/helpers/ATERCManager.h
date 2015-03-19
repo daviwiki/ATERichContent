@@ -57,6 +57,7 @@
 
 /**
  * @function
+ * addRichViewComponent:
  * @brief <p>Include a new compontent that could be inserted/created
  * into ATERCContainerView. You could override an existing alias
  * with your own implementation.
@@ -69,6 +70,15 @@
  * @return Return YES if the operation finish successfully
  */
 - (BOOL) addRichViewComponent:(ATERCComponent *) component;
+
+/**
+ * @function 
+ * getAvailableCompontents
+ * @brief
+ * <p>Return all available components registered into the
+ * system</p>
+ */
+- (NSDictionary *) getAvailableCompontents;
 
 /**
  * @function setEnableLogs

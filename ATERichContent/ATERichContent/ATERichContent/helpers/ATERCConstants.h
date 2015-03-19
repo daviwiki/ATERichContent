@@ -15,12 +15,12 @@ typedef NS_OPTIONS(NSInteger, ATERCComponentType) {
 };
 
 ///
-/// ATARichContentView Properties
+/// ATERCView Properties
 ///
 extern CGFloat kATERCWrapContentHeight;
 
 ///
-/// ATERichContentView Types
+/// ATERCView Types
 ///
 extern NSString *kATERCTypeLabel;
 extern NSString *kATERCTypeAttributtedLabel;
@@ -28,6 +28,11 @@ extern NSString *kATERCTypeImage;
 extern NSString *kATERCTypePhotoGallery;
 extern NSString *kATERCTypeWebview;
 extern NSString *kATERCTypeMap;
+
+///
+/// ATERCView Notifications
+///
+extern NSString *kATERCNewAliasIncludedNotificationKey;
 
 @interface ATERCConstants : NSObject
 @end

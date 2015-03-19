@@ -11,8 +11,7 @@
 @implementation ATERCComponent
 
 - (BOOL) isEqual:(ATERCComponent *)object {
-    return self.mType == object.mType &&
-            [self.mAlias isEqualToString:object.mAlias];
+    return [self.mAlias isEqualToString:object.mAlias];
 }
 
 @end
