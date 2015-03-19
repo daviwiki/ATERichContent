@@ -26,80 +26,85 @@ static ATERCManager *stInstance;
 @implementation ATERCManager
 
 #pragma mark - -------------------- IMPLEMENTATION ---------------------
-#pragma mark - ---- Services
-- (void) initializeHelper {
-    // Add default components to matrix
+#pragma mark - ---- Internal
+- (void) initializeManager {
     self.mViewAliases = [[NSMutableDictionary alloc] init];
     
     ATERCComponent *c = nil;
-    NSString *className = nil;
-    NSString *alias = nil;
+    c = [[ATERCComponent alloc] init];
+    c.mName = NSStringFromClass([ATERCLabelView class]);
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = kATERCTypeLabel;
+    c.mReuseId = c.mName;
+    [self addRichViewComponent:c];
     
-    alias = kATERCTypeLabel;
-    className = NSStringFromClass([ATERCLabelView class]);
-    c = [ATERCComponent getComponentWithName:className
-                                        type:ATERCComponentTypeNib
-                                       alias:alias
-                                     reuseId:className];
-    self.mViewAliases[alias] = c;
+    c = [[ATERCComponent alloc] init];
+    c.mName = NSStringFromClass([ATERCImageView class]);
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = kATERCTypeImage;
+    c.mReuseId = c.mName;
+    [self addRichViewComponent:c];
+}
+
+#pragma mark - ---- Services
+- (BOOL) addRichViewComponent:(ATERCComponent *) component {
+    if (!component.mName) {
+        [ATERCLog log:@"No class/nib name defined"];
+        return NO;
+    }
+    if (!component.mAlias) {
+        [ATERCLog log:@"No alias defined"];
+        return NO;
+    }
+    if (!component.mReuseId) {
+        [ATERCLog log:@"No reuseId defined"];
+        return NO;
+    }
     
-    alias = kATERCTypeImage;
-    className = NSStringFromClass([ATERCImageView class]);
-    c = [ATERCComponent getComponentWithName:className
-                                        type:ATERCComponentTypeNib
-                                       alias:alias
-                                     reuseId:className];
-    self.mViewAliases[alias] = c;
+    if (component.mType == ATERCComponentTypeClass) {
+        Class clazz = NSClassFromString(component.mName);
+        if (clazz == nil) {
+            [ATERCLog log:@"No class exists with this name"];
+            return NO;
+        } else if (![clazz isSubclassOfClass:[ATERCView class]]) {
+            [ATERCLog log:@"The class specified not inherits from ATERCView"];
+            return NO;
+        }
+    } else {
+        UINib *nib = [UINib nibWithNibName:component.mName bundle:component.mBundle];
+        if (!nib) {
+            [ATERCLog log:@"No nib defined with this name"];
+            return NO;
+        }
+        
+        UIView *view = [[nib instantiateWithOwner:nil options:nil] firstObject];
+        if ([view.class isSubclassOfClass:[ATERCView class]]) {
+            [ATERCLog log:@"The class specified not inherits from ATERCView"];
+            return NO;
+        }
+    }
+    
+    self.mViewAliases[component.mAlias] = component;
+    return YES;
 }
 
 - (BOOL) addRichViewClassName:(NSString *) className forAlias:(NSString *) alias reuseId:(NSString *)reuseId {
-    if (!className || !alias || !reuseId) {
-        [ATERCLog log:@"No className, alias or reuseId defined"];
-        return NO;
-    }
-    
-    Class clazz = NSClassFromString(className);
-    if (clazz == nil) {
-        [ATERCLog log:@"No class exists with this name"];
-        return NO;
-    } else if (![clazz isSubclassOfClass:[ATERCView class]]) {
-        [ATERCLog log:@"The class specified not inherits from ATERichContentComponentView"];
-        return NO;
-    }
-    
-    ATERCComponent *c = [ATERCComponent getComponentWithName:className
-                                                        type:ATERCComponentTypeClass
-                                                       alias:alias
-                                                     reuseId:reuseId];
-    self.mViewAliases[alias] = c;
-    
-    return YES;
+    ATERCComponent *c = [[ATERCComponent alloc] init];
+    c.mName = className;
+    c.mType = ATERCComponentTypeClass;
+    c.mAlias = alias;
+    c.mReuseId = reuseId;
+    return [self addRichViewComponent:c];
 }
 
 - (BOOL) addRichViewNibName:(NSString *) nibName atBundle:(NSBundle *) bundle forAlias:(NSString *) alias reuseId:(NSString *) reuseId {
-    if (!nibName || !alias || !reuseId) {
-        [ATERCLog log:@"No nibname, alias or reuseId defined"];
-        return NO;
-    }
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:bundle];
-    if (!nib) {
-        [ATERCLog log:@"No nib defined with this name"];
-        return NO;
-    }
-    
-    UIView *view = [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] firstObject];
-    if ([view.class isSubclassOfClass:[ATERCView class]]) {
-        [ATERCLog log:@"The class specified not inherits from ATERichContentComponentView"];
-        return NO;
-    }
-    
-    ATERCComponent *c = [ATERCComponent getComponentWithName:nibName
-                                                        type:ATERCComponentTypeNib
-                                                       alias:alias
-                                                     reuseId:reuseId];
-    self.mViewAliases[alias] = c;
-    return YES;
+    ATERCComponent *c = [[ATERCComponent alloc] init];
+    c.mName = nibName;
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = alias;
+    c.mReuseId = reuseId;
+    c.mBundle = bundle;
+    return [self addRichViewComponent:c];
 }
 
 - (void) setEnableLogs:(BOOL) enableLogs {
@@ -112,7 +117,7 @@ static ATERCManager *stInstance;
 + (ATERCManager *) getInstance {
     if (!stInstance) {
         stInstance = [ATERCManager alloc];
-        [stInstance initializeHelper];
+        [stInstance initializeManager];
     }
     return stInstance;
 }
