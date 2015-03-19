@@ -14,8 +14,7 @@
 
 @implementation ATERCView
 
-+ (NSNumber *) getHeightForContent:(ATERC *) content
-                      andComponent:(ATERCComponent *) compontent {    
++ (NSNumber *) getHeightForContent:(ATERC *) content {
     return @(0);
 }
 

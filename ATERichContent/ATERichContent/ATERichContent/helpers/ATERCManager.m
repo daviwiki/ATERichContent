@@ -35,14 +35,14 @@ static ATERCManager *stInstance;
     c.mName = NSStringFromClass([ATERCLabelView class]);
     c.mType = ATERCComponentTypeNib;
     c.mAlias = kATERCTypeLabel;
-    c.mReuseId = c.mName;
+    c.mReuseId = kATERCTypeLabel;
     [self addRichViewComponent:c];
     
     c = [[ATERCComponent alloc] init];
     c.mName = NSStringFromClass([ATERCImageView class]);
     c.mType = ATERCComponentTypeNib;
     c.mAlias = kATERCTypeImage;
-    c.mReuseId = c.mName;
+    c.mReuseId = kATERCTypeImage;
     [self addRichViewComponent:c];
 }
 
@@ -77,9 +77,14 @@ static ATERCManager *stInstance;
             return NO;
         }
         
-        UIView *view = [[nib instantiateWithOwner:nil options:nil] firstObject];
-        if ([view.class isSubclassOfClass:[ATERCView class]]) {
-            [ATERCLog log:@"The class specified not inherits from ATERCView"];
+        @try {
+            UIView *view = [[nib instantiateWithOwner:nil options:nil] firstObject];
+            if (![view.class isSubclassOfClass:[ATERCView class]]) {
+                [ATERCLog log:@"The class specified not inherits from ATERCView"];
+                return NO;
+            }
+        } @catch (NSException *exception) {
+            [ATERCLog log:@"No nib defined with this name"];
             return NO;
         }
     }

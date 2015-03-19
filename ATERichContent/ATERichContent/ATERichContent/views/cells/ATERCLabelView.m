@@ -7,32 +7,30 @@
 //
 
 #import "ATERCLabelView.h"
-#import "ATERCManager.h"
-#import "ATERCLog.h"
-#import "ATERCLabel.h"
-#import "ATERCHelper.h"
+#import "ATERCHeaders.h"
 
 static ATERCLabelView *stDummyInstance;
 
 @interface ATERCLabelView ()
 
-@property (nonatomic, strong) NSString *mContent;
+@property (nonatomic, strong) ATERCLabel *mContent;
 
 @end
 
 @implementation ATERCLabelView
 
 #pragma mark - ---- Internal
-- (void) drawContent:(NSString *) content {
-    self.mTextLabel.text = content;
+- (void) drawContent:(ATERCLabel *)content {
+    self.mTextLabel.text = content.mText;
 }
 
 #pragma mark - ---- Services
 #pragma mark - ---- Overrides
-+ (NSNumber *) getHeightForContent:(ATERC *)content
-                      andComponent:(ATERCComponent *)compontent {
++ (NSNumber *) getHeightForContent:(ATERC *)content {
     if (!stDummyInstance) {
-        stDummyInstance = (ATERCLabelView *)[ATERCHelper getViewForCompontent:compontent];
+        NSArray *aliases = [[[ATERCManager getInstance] getAvailableCompontents] allValues];
+        ATERCComponent *c = [ATERCHelper getComponentForAlias:kATERCTypeLabel intoList:aliases];
+        stDummyInstance = (ATERCLabelView *)[ATERCHelper getViewForCompontent:c];
     }
     
     CGRect frame = stDummyInstance.frame;
@@ -40,22 +38,28 @@ static ATERCLabelView *stDummyInstance;
     stDummyInstance.frame = frame;
     
     [stDummyInstance showContent:content];
-    [stDummyInstance layoutIfNeeded];
+    CGRect rect = [stDummyInstance.mTextLabel.text boundingRectWithSize:CGSizeMake(stDummyInstance.mTextLabel.frame.size.width, MAXFLOAT)
+                                                                options:NSStringDrawingUsesLineFragmentOrigin
+                                                             attributes:@{
+                                                                          NSFontAttributeName:stDummyInstance.mTextLabel.font
+                                                                          }
+                                                                context:nil];
     
-    return @(stDummyInstance.mTextLabel.frame.size.height);
+    
+    return @(rect.size.height);
 }
 
 - (BOOL) validateContent:(ATERC *)content {
     return [[content class] isSubclassOfClass:[ATERCLabel class]];
 }
 
-- (void) showContent:(ATERC *)content {
+- (void) showContent:(ATERCLabel *)content {
     if (![self validateContent:content]) {
         [ATERCLog log:@"Invalid class type excepected for content into ATERCLabelView class"];
         return;
     }
     
-    self.mContent = (NSString *) content;
+    self.mContent = content;
     [self drawContent:self.mContent];
 }
 

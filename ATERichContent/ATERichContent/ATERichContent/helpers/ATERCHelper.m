@@ -22,7 +22,7 @@ static NSMutableDictionary *stAliasToClassRelations = nil;
                            andClassName:(NSString *) className {
     Class clazz = NSClassFromString(className);
     
-    SEL selector = @selector(getHeightForContent:andComponent:);
+    SEL selector = @selector(getHeightForContent:);
     
     NSNumber *height = @(0);
     #pragma clang diagnostic push
@@ -35,7 +35,7 @@ static NSMutableDictionary *stAliasToClassRelations = nil;
 }
 
 + (NSNumber *) getNibHeightForContent:(ATERC *) content
-                          andComponent:(ATERCComponent *) compontent {
+                         andComponent:(ATERCComponent *) compontent {
     NSString *className = stAliasToClassRelations[compontent.mAlias];
     if (className) {
         return [ATERCHelper getClassHeightForContent:content andClassName:className];
@@ -49,7 +49,7 @@ static NSMutableDictionary *stAliasToClassRelations = nil;
     }
     
     stAliasToClassRelations[compontent.mAlias] = className;
-    return [ATERCHelper  getClassHeightForContent:content andClassName:className];
+    return [ATERCHelper getClassHeightForContent:content andClassName:className];
 }
 
 #pragma mark - ---- Services

@@ -21,10 +21,8 @@
  * for this content and compontent</p>
  * @note <p>If something goes wrong, return 0</p>
  * @param content, not null
- * @param component, not null
  */
-+ (NSNumber *) getHeightForContent:(ATERC *) content
-                      andComponent:(ATERCComponent *) compontent;
++ (NSNumber *) getHeightForContent:(ATERC *) content;
 
 /**
  * @function

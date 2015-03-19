@@ -32,7 +32,10 @@
     self.mItems = [NSMutableArray array];
     
     /// Cooking collection view
-    UICollectionView *cv = [[UICollectionView alloc] init];
+    UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    UICollectionView *cv = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:flowLayout];
+    cv.backgroundColor = [UIColor clearColor];
     cv.delegate = self;
     cv.dataSource = self;
     cv.translatesAutoresizingMaskIntoConstraints = NO;

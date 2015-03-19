@@ -74,6 +74,7 @@
 		46420F631ABAD885004D7845 /* ATERCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCManager.m; sourceTree = "<group>"; };
 		46420F651ABAD96C004D7845 /* ATERCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCLog.h; sourceTree = "<group>"; };
 		46420F661ABAD96C004D7845 /* ATERCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCLog.m; sourceTree = "<group>"; };
+		466404011ABB46B000DB5D60 /* ATERCHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATERCHeaders.h; sourceTree = "<group>"; };
 		468D06B51AA8BFD800DF59B2 /* ATERCComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCComponent.h; sourceTree = "<group>"; };
 		468D06B61AA8BFD800DF59B2 /* ATERCComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCComponent.m; sourceTree = "<group>"; };
 		468D06B81AA8C00C00DF59B2 /* ATERCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCLabel.h; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 			children = (
 				468D06B41AA8BF9200DF59B2 /* beansCompontent */,
 				4632BEAF1AA4DC6F00AE3A2B /* beansContents */,
+				466404001ABB468D00DB5D60 /* header */,
 				4632BEBD1AA4DE6700AE3A2B /* helpers */,
 				4632BEAE1AA4DC4700AE3A2B /* views */,
 			);
@@ -230,6 +232,15 @@
 				46420F631ABAD885004D7845 /* ATERCManager.m */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		466404001ABB468D00DB5D60 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				466404011ABB46B000DB5D60 /* ATERCHeaders.h */,
+			);
+			name = header;
+			path = headers;
 			sourceTree = "<group>";
 		};
 		468D06B41AA8BF9200DF59B2 /* beansCompontent */ = {

@@ -11,7 +11,7 @@
 
 typedef NS_OPTIONS(NSInteger, ATERCComponentType) {
     ATERCComponentTypeClass = 0,
-    ATERCComponentTypeNib = 0,
+    ATERCComponentTypeNib = 1,
 };
 
 ///

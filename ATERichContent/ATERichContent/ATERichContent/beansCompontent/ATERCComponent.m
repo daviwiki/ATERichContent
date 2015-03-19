@@ -14,4 +14,9 @@
     return [self.mAlias isEqualToString:object.mAlias];
 }
 
+- (NSString *) debugDescription {
+    return [NSString stringWithFormat:@"[ATERCComponent][%p][alias:%@, name:%@, type:%i, reuseId:%@]",
+            self, self.mAlias, self.mName, self.mType, self.mReuseId];
+}
+
 @end
