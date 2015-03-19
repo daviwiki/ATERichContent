@@ -8,23 +8,38 @@
 
 #import <UIKit/UIKit.h>
 
+@class ATERC, ATERCComponent;
+
 @interface ATERCView : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UIView *mBackgroundView;
 
 /**
  * @function
+ * getHeightForContent:andComponent:
+ * @brief <p>Returnt the contents height 
+ * for this content and compontent</p>
+ * @note <p>If something goes wrong, return 0</p>
+ * @param content, not null
+ * @param component, not null
  */
-+ (CGFloat) getWrapContentHeight;
++ (NSNumber *) getHeightForContent:(ATERC *) content
+                      andComponent:(ATERCComponent *) compontent;
 
 /**
  * @function
+ * validateContent:
+ * @brief
+ * <p></p>
  */
-- (BOOL) validateContent:(NSObject *) content;
+- (BOOL) validateContent:(ATERC *) content;
 
 /**
  * @function
+ * showContent:
+ * @brief
+ * <p></p>
  */
-- (void) showContent:(NSObject *) content;
+- (void) showContent:(ATERC *) content;
 
 @end

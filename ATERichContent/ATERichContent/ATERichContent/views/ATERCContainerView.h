@@ -46,7 +46,7 @@
  * showContent:
  * @brief Display the list of contents given (if any). This method
  * clean all contents loaded previously
- * @param contents, array of "ATERichContent" (or subclass) items
+ * @param contents, array of "ATERC" (or subclass) items
  */
 - (void) showContent:(NSArray *) contents;
 

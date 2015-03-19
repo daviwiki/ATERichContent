@@ -11,12 +11,34 @@
 
 @interface ATERCComponent : NSObject
 
-@property (nonatomic, strong) NSString *mName;          // class name or nib name
-@property (nonatomic, assign) ATERCComponentType mType;
-@property (nonatomic, strong) NSString *mAlias;         // human-readable name
-@property (nonatomic, strong) NSString *mReuseId;       // reuseId for collection view
+/**
+ * @property mName
+ * @brief <p>machine class name or nib name</p>
+ */
+@property (nonatomic, strong) NSString *mName;
 
-// Nib registration
-@property (nonatomic, strong) NSBundle *mBundle;        // for nibs, bundle where is located the nib
+/**
+ * @property mType
+ * @brief <p>component type {ATERCComponentTypeClass, ATERCComponentTypeNib}</p>
+ */
+@property (nonatomic, assign) ATERCComponentType mType;
+
+/**
+ * @property mAlias
+ * @brief <p>Human readable name</p>
+ */
+@property (nonatomic, strong) NSString *mAlias;
+
+/**
+ * @property mReuseId
+ * @brief <p>use like id for the collection view cells</p>
+ */
+@property (nonatomic, strong) NSString *mReuseId;
+
+/**
+ * @property mBundle
+ * @brief <p>for nibs, bundle where is located the nib</p>
+ */
+@property (nonatomic, strong) NSBundle *mBundle;
 
 @end

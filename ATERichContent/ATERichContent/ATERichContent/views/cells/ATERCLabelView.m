@@ -9,6 +9,8 @@
 #import "ATERCLabelView.h"
 #import "ATERCManager.h"
 #import "ATERCLog.h"
+#import "ATERCLabel.h"
+#import "ATERCHelper.h"
 
 static ATERCLabelView *stDummyInstance;
 
@@ -28,22 +30,26 @@ static ATERCLabelView *stDummyInstance;
 
 #pragma mark - ---- Services
 #pragma mark - ---- Overrides
-+ (CGFloat) getWrapContentHeight {
-//    if (!stDummyInstance) {
-//        NSString *className = NSStringFromClass([ATERichContentComponentLabel class]);
-//        stDummyInstance = [[[NSBundle mainBundle] loadNibNamed:className owner:nil options:nil] firstObject];
-//    }
-//    
-//    stDummyInstance
++ (NSNumber *) getHeightForContent:(ATERC *)content andComponent:(ATERCComponent *)compontent {
+    if (!stDummyInstance) {
+        stDummyInstance = (ATERCLabelView *)[ATERCHelper getViewForCompontent:compontent];
+    }
     
-    return 0;
+    CGRect frame = stDummyInstance.frame;
+    frame.size.width = content.mRichContentWidth;
+    stDummyInstance.frame = frame;
+    
+    [stDummyInstance showContent:content];
+    [stDummyInstance layoutIfNeeded];
+    
+    return @(stDummyInstance.mTextLabel.frame.size.height);
 }
 
-- (BOOL) validateContent:(NSObject *)content {
-    return [[content class] isSubclassOfClass:[NSString class]];
+- (BOOL) validateContent:(ATERC *)content {
+    return [[content class] isSubclassOfClass:[ATERCLabel class]];
 }
 
-- (void) showContent:(NSObject *)content {
+- (void) showContent:(ATERC *)content {
     if (![self validateContent:content]) {
         [ATERCLog log:@"Invalid class type excepected for content into ATERCLabelView class"];
         return;

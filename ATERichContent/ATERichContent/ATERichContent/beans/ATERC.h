@@ -17,7 +17,7 @@
  * @brief The string that identifies one of the types
  * avialables for a ATERichContentView component. You can
  * find this possible values at ATERichContentConstants.h
- * with preffix "kATERichContentComponentType***" where
+ * with preffix "kATERCCompontentType***" where
  * xxx represents an available ATE-local type.
  */
 @property (nonatomic, strong) NSString *mRichContentType;
@@ -29,5 +29,13 @@
  * is specfied the system decides the default height
  */
 @property (nonatomic, assign) CGFloat mRichContentHeight;
+
+/**
+ * @property
+ * mRichContentWidth
+ * @brief Width for the component. If no width
+ * is specfied the system decides the default width
+ */
+@property (nonatomic, assign) CGFloat mRichContentWidth;
 
 @end

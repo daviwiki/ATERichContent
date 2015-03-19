@@ -7,11 +7,24 @@
 //
 
 #import "ATERCView.h"
+#import "ATERC.h"
+#import "ATERCComponent.h"
+#import "ATERCConstants.h"
+#import "ATERCHelper.h"
 
 @implementation ATERCView
 
-+ (CGFloat) getWrapContentHeight {
-    return 0;
++ (NSNumber *) getHeightForContent:(ATERC *) content
+                      andComponent:(ATERCComponent *) compontent {
+    if (content == nil || compontent == nil) {
+        return @(0);
+    }
+    
+    if (content.mRichContentHeight != kATERCWrapContentHeight) {
+        return @(content.mRichContentHeight);
+    }
+    
+    return @(0);
 }
 
 - (BOOL) validateContent:(NSObject *) content {
