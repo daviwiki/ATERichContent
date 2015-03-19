@@ -6,18 +6,18 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentComponentLabel.h"
-#import "ATERichContentHelper.h"
+#import "ATERCLabelView.h"
+#import "ATERCHelper.h"
 
-static ATERichContentComponentLabel *stDummyInstance;
+static ATERCLabelView *stDummyInstance;
 
-@interface ATERichContentComponentLabel ()
+@interface ATERCLabelView ()
 
 @property (nonatomic, strong) NSString *mContent;
 
 @end
 
-@implementation ATERichContentComponentLabel
+@implementation ATERCLabelView
 
 #pragma mark - ---- Internal
 - (void) drawContent:(NSString *) content {
@@ -44,7 +44,7 @@ static ATERichContentComponentLabel *stDummyInstance;
 
 - (void) showContent:(NSObject *)content {
     if (![self validateContent:content]) {
-        [[ATERichContentHelper getInstance] log:@"Invalid class type excepected for content into ATERichContentComponentLabel class"];
+        [[ATERCHelper getInstance] log:@"Invalid class type excepected for content into ATERichContentComponentLabel class"];
         return;
     }
     

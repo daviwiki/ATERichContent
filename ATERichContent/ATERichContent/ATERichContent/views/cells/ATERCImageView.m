@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentComponentImage.h"
+#import "ATERCImageView.h"
 
-@implementation ATERichContentComponentImage
+@implementation ATERCImageView
 
 @end

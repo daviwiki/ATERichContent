@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContent.h"
+#import "ATERC.h"
 
-@implementation ATERichContent
+@implementation ATERC
 
 @end

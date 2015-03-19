@@ -1,13 +1,13 @@
 //
-//  ATERichContentImage.m
+//  ATERichContentAttributtedLabel.m
 //  ATERichContent
 //
 //  Created by David Martinez on 5/3/15.
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentImage.h"
+#import "ATERCAttributtedLabel.h"
 
-@implementation ATERichContentImage
+@implementation ATERCAttributtedLabel
 
 @end

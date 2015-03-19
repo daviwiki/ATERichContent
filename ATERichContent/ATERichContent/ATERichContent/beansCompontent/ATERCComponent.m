@@ -6,19 +6,19 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentComponent.h"
+#import "ATERCComponent.h"
 
-@implementation ATERichContentComponent
+@implementation ATERCComponent
 
-+ (ATERichContentComponent *) getComponentWithName:(NSString *) name
-                                              type:(ATERichContentComponentType) type
++ (ATERCComponent *) getComponentWithName:(NSString *) name
+                                              type:(ATERCComponentType) type
                                              alias:(NSString *) alias
                                            reuseId:(NSString *) reuseId {
     if (!name || !alias || !reuseId) {
         return nil;
     }
     
-    ATERichContentComponent *component = [[ATERichContentComponent alloc] init];
+    ATERCComponent *component = [[ATERCComponent alloc] init];
     component.mName = name;
     component.mType = type;
     component.mAlias = alias;

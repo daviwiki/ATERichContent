@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContent.h"
+#import "ATERC.h"
 
-@interface ATERichContentAttributtedLabel : ATERichContent
+@interface ATERCAttributtedLabel : ATERC
 
 @property (nonatomic, strong) NSAttributedString *mAttributedText;
 

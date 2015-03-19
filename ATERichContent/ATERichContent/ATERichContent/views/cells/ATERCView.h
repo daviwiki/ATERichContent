@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ATERichContentComponentView : UICollectionViewCell
+@interface ATERCView : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UIView *mBackgroundView;
 

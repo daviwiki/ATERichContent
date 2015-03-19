@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentView.h"
+#import "ATERCContainerView.h"
 
-@interface ATERichContentView ()
+@interface ATERCContainerView ()
 
 @end
 
-@implementation ATERichContentView
+@implementation ATERCContainerView
 
 #pragma mark - -------------------- IMPLEMENTATION ---------------------
 #pragma mark - ---- Internal
@@ -21,11 +21,11 @@
 }
 
 #pragma mark - ---- Services
-- (void) appendItem:(ATERichContent *) content {
+- (void) appendItem:(ATERC *) content {
     
 }
 
-- (void) appendItem:(ATERichContent *)content atIndex:(NSUInteger) index {
+- (void) appendItem:(ATERC *)content atIndex:(NSUInteger) index {
     
 }
 

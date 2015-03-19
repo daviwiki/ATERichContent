@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContent.h"
+#import "ATERC.h"
 
-@interface ATERichContentGallery : ATERichContent
+@interface ATERCGallery : ATERC
 
 @property (nonatomic, strong) NSArray *mImagesUrl; // Array (String)
 

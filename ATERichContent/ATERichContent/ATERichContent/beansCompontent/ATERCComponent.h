@@ -7,20 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ATERichContentConstants.h"
+#import "ATERCConstants.h"
 
-@interface ATERichContentComponent : NSObject
+@interface ATERCComponent : NSObject
 
 @property (nonatomic, strong) NSString *mName; // class name or nib name
-@property (nonatomic, assign) ATERichContentComponentType mType;
+@property (nonatomic, assign) ATERCComponentType mType;
 @property (nonatomic, strong) NSString *mAlias;
 @property (nonatomic, strong) NSString *mReuseId;
 
 // Nib registration
 @property (nonatomic, strong) NSBundle *mBundle;
 
-+ (ATERichContentComponent *) getComponentWithName:(NSString *) name
-                                              type:(ATERichContentComponentType) type
++ (ATERCComponent *) getComponentWithName:(NSString *) name
+                                              type:(ATERCComponentType) type
                                              alias:(NSString *) alias
                                            reuseId:(NSString *) reuseId;
 

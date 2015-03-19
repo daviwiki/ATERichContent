@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentComponentView.h"
+#import "ATERCView.h"
 
-@implementation ATERichContentComponentView
+@implementation ATERCView
 
 + (CGFloat) getWrapContentHeight {
     return 0;

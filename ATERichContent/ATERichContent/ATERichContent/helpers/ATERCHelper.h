@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ATERichContentHelper : NSObject
+@interface ATERCHelper : NSObject
 
 /**
  * @function
@@ -58,7 +58,7 @@
  * getInstance
  * @brief Return the unique single instance for ATERichContentHelper
  */
-+ (ATERichContentHelper *) getInstance;
++ (ATERCHelper *) getInstance;
 
 /**
  * @function

@@ -6,23 +6,23 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContentHelper.h"
-#import "ATERichContentComponent.h"
-#import "ATERichContentConstants.h"
-#import "ATERichContentComponentView.h"
+#import "ATERCHelper.h"
+#import "ATERCComponent.h"
+#import "ATERCConstants.h"
+#import "ATERCView.h"
 
-#import "ATERichContentComponentLabel.h"
-#import "ATERichContentComponentImage.h"
+#import "ATERCLabelView.h"
+#import "ATERCImageView.h"
 
-static ATERichContentHelper *stInstance;
+static ATERCHelper *stInstance;
 
-@interface ATERichContentHelper ()
+@interface ATERCHelper ()
 
 @property (nonatomic, strong) NSMutableDictionary *mViewAliases;
 
 @end
 
-@implementation ATERichContentHelper
+@implementation ATERCHelper
 
 #pragma mark - -------------------- IMPLEMENTATION ---------------------
 #pragma mark - ---- Internal
@@ -31,7 +31,7 @@ static ATERichContentHelper *stInstance;
         return;
     }
     
-    NSLog(@"[ATE][%@] %@", NSStringFromClass([ATERichContentHelper class]), logMessage);
+    NSLog(@"[ATE][%@] %@", NSStringFromClass([ATERCHelper class]), logMessage);
 }
 
 #pragma mark - ---- Services
@@ -39,21 +39,21 @@ static ATERichContentHelper *stInstance;
     // Add default components to matrix
     self.mViewAliases = [[NSMutableDictionary alloc] init];
     
-    ATERichContentComponent *c = nil;
+    ATERCComponent *c = nil;
     NSString *className = nil;
     NSString *alias = nil;
     
-    alias = kATERichContentComponentTypeLabel;
-    className = NSStringFromClass([ATERichContentComponentLabel class]);
-    c = [ATERichContentComponent getComponentWithName:className
+    alias = kATERCTypeLabel;
+    className = NSStringFromClass([ATERCLabelView class]);
+    c = [ATERCComponent getComponentWithName:className
                                                  type:ATERichContentComponentTypeNib
                                                 alias:alias
                                               reuseId:className];
     self.mViewAliases[alias] = c;
     
-    alias = kATERichContentComponentTypeImage;
-    className = NSStringFromClass([ATERichContentComponentImage class]);
-    c = [ATERichContentComponent getComponentWithName:className
+    alias = kATERCTypeImage;
+    className = NSStringFromClass([ATERCImageView class]);
+    c = [ATERCComponent getComponentWithName:className
                                                  type:ATERichContentComponentTypeNib
                                                 alias:alias
                                               reuseId:className];
@@ -70,12 +70,12 @@ static ATERichContentHelper *stInstance;
     if (clazz == nil) {
         [self log:@"No class exists with this name"];
         return NO;
-    } else if (![clazz isSubclassOfClass:[ATERichContentComponentView class]]) {
+    } else if (![clazz isSubclassOfClass:[ATERCView class]]) {
         [self log:@"The class specified not inherits from ATERichContentComponentView"];
         return NO;
     }
     
-    ATERichContentComponent *c = [ATERichContentComponent getComponentWithName:className
+    ATERCComponent *c = [ATERCComponent getComponentWithName:className
                                                                           type:ATERichContentComponentTypeClass
                                                                          alias:alias
                                                                        reuseId:reuseId];
@@ -97,12 +97,12 @@ static ATERichContentHelper *stInstance;
     }
     
     UIView *view = [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] firstObject];
-    if ([view.class isSubclassOfClass:[ATERichContentComponentView class]]) {
+    if ([view.class isSubclassOfClass:[ATERCView class]]) {
         [self log:@"The class specified not inherits from ATERichContentComponentView"];
         return NO;
     }
     
-    ATERichContentComponent *c = [ATERichContentComponent getComponentWithName:nibName
+    ATERCComponent *c = [ATERCComponent getComponentWithName:nibName
                                                                           type:ATERichContentComponentTypeNib
                                                                          alias:alias
                                                                        reuseId:reuseId];
@@ -113,9 +113,9 @@ static ATERichContentHelper *stInstance;
 #pragma mark - -------------------- OVERRIDES ---------------------
 #pragma mark - -------------------- DELEGATES ---------------------
 #pragma mark - -------------------- LIFECICLE ---------------------
-+ (ATERichContentHelper *) getInstance {
++ (ATERCHelper *) getInstance {
     if (!stInstance) {
-        stInstance = [ATERichContentHelper alloc];
+        stInstance = [ATERCHelper alloc];
         [stInstance initializeHelper];
     }
     return stInstance;

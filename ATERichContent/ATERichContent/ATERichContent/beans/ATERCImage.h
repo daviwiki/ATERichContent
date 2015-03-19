@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Atenea. All rights reserved.
 //
 
-#import "ATERichContent.h"
+#import "ATERC.h"
 
-@interface ATERichContentImage : ATERichContent
+@interface ATERCImage : ATERC
 
 @property (nonatomic, strong) NSString *mImageUrl;
 

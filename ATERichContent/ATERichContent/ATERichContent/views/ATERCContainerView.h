@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class ATERichContent;
+@class ATERC;
 
 /**
  * @class 
@@ -17,14 +17,14 @@
  *      <Foundation/Foundation.h>
  *      <UIKit/UIKit.h>
  */
-@interface ATERichContentView : UIView
+@interface ATERCContainerView : UIView
 
 /**
  * @function
  * appendItem:
  * @brief Include a new rich content item into the view (into last position)
  */
-- (void) appendItem:(ATERichContent *) content;
+- (void) appendItem:(ATERC *) content;
 
 /**
  * @function
@@ -32,7 +32,7 @@
  * @brief Include a new rich content item into the index
  * given by 'index' param
  */
-- (void) appendItem:(ATERichContent *)content atIndex:(NSUInteger) index;
+- (void) appendItem:(ATERC *)content atIndex:(NSUInteger) index;
 
 /**
  * @function
