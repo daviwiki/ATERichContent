@@ -1,5 +1,5 @@
 //
-//  ATERichContentLabel.h
+//  ATERCLabelView.h
 //  ATERichContent
 //
 //  Created by David Martinez on 2/3/15.

@@ -1,5 +1,5 @@
 //
-//  ATERichContentComponentView.h
+//  ATERCView.h
 //  ATERichContent
 //
 //  Created by David Martinez on 2/3/15.

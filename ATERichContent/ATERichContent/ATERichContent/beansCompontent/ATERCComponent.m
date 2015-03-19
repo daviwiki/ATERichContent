@@ -1,5 +1,5 @@
 //
-//  ATARichContentComponent.m
+//  ATARCComponent.m
 //  ATERichContent
 //
 //  Created by David Martinez on 3/3/15.

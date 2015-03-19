@@ -1,5 +1,5 @@
 //
-//  ATERichContentLabel.m
+//  ATERCLabelView.m
 //  ATERichContent
 //
 //  Created by David Martinez on 2/3/15.
@@ -7,7 +7,8 @@
 //
 
 #import "ATERCLabelView.h"
-#import "ATERCHelper.h"
+#import "ATERCManager.h"
+#import "ATERCLog.h"
 
 static ATERCLabelView *stDummyInstance;
 
@@ -44,7 +45,7 @@ static ATERCLabelView *stDummyInstance;
 
 - (void) showContent:(NSObject *)content {
     if (![self validateContent:content]) {
-        [[ATERCHelper getInstance] log:@"Invalid class type excepected for content into ATERichContentComponentLabel class"];
+        [ATERCLog log:@"Invalid class type excepected for content into ATERCLabelView class"];
         return;
     }
     

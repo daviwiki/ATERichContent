@@ -1,5 +1,5 @@
 //
-//  ATERichContentAttributtedLabel.h
+//  ATERCAttributtedLabel.h
 //  ATERichContent
 //
 //  Created by David Martinez on 5/3/15.

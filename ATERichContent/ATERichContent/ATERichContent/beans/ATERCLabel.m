@@ -1,5 +1,5 @@
 //
-//  ATERichContentLabel.m
+//  ATERCLabel.m
 //  ATERichContent
 //
 //  Created by David Martinez on 5/3/15.

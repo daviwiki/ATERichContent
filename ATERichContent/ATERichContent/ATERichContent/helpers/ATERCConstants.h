@@ -1,5 +1,5 @@
 //
-//  ATERichContentConstants.h
+//  ATERCConstants.h
 //  ATERichContent
 //
 //  Created by David Martinez on 2/3/15.
@@ -10,14 +10,14 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_OPTIONS(NSInteger, ATERCComponentType) {
-    ATERichContentComponentTypeClass = 0,
-    ATERichContentComponentTypeNib = 0,
+    ATERCComponentTypeClass = 0,
+    ATERCComponentTypeNib = 0,
 };
 
 ///
 /// ATARichContentView Properties
 ///
-extern CGFloat kATERichContentWrapContentHeight;
+extern CGFloat kATERCWrapContentHeight;
 
 ///
 /// ATERichContentView Types

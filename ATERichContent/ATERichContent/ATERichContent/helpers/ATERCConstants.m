@@ -1,5 +1,5 @@
 //
-//  ATERichContentConstants.m
+//  ATERCConstants.m
 //  ATERichContent
 //
 //  Created by David Martinez on 2/3/15.
@@ -8,7 +8,7 @@
 
 #import "ATERCConstants.h"
 
-CGFloat kATERichContentWrapContentHeight = -1;
+CGFloat kATERCWrapContentHeight = -1;
 
 NSString *kATERCTypeLabel = @"TXT";
 NSString *kATERCTypeAttributtedLabel = @"ATXT";

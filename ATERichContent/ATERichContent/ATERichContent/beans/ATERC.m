@@ -1,5 +1,5 @@
 //
-//  ATERichContent.m
+//  ATERC.m
 //  ATERichContent
 //
 //  Created by David Martinez on 2/3/15.
