@@ -25,9 +25,11 @@
 #pragma mark - ---- Internal
 - (void) drawContent:(ATERCImage *) content {
     if (content.mImageLoadBlock != nil) {
+        self.mImageView.mActivityIndicator.hidden = NO;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             UIImage *image = content.mImageLoadBlock(content.mImageUrl);
             dispatch_async(dispatch_get_main_queue(), ^{
+                self.mImageView.mActivityIndicator.hidden = YES;
                 self.mImageView.image = image;
             });
         });

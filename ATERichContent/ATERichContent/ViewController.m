@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSArray *mSimpleTexts;
 @property (nonatomic, strong) NSArray *mSimpleImages;
+@property (nonatomic, strong) NSArray *mSimpleWebView;
 
 @end
 
@@ -29,10 +30,14 @@
     self.mSimpleImages = @[@"http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg",
                            @"http://media4.popsugar-assets.com/files/2014/08/08/878/n/1922507/caef16ec354ca23b_thumb_temp_cover_file32304521407524949.xxxlarge/i/Funny-Cat-GIFs.jpg",
                            @"http://freedwallpaper.com/wp-content/uploads/2014/11/cat-wallpapers-for-desktop-2-1366x768-770958.jpg"];
+    
+    self.mSimpleWebView = @[@"http://www.google.es",
+                            @"http://www.twitter.com",
+                            @"http://www.facebook.com"];
 }
 
 - (IBAction) actionInsertATERCItem:(id)sender {
-    NSInteger numberOfViewers = 3;
+    NSInteger numberOfViewers = 4;
     NSInteger viewer = arc4random() % numberOfViewers;
     
     ATERC *rc = nil;
@@ -77,6 +82,11 @@
         [aText addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(2*interval, interval)];
         
         ((ATERCAttributtedLabel *) rc).mAttributedText = aText;
+    } else if (viewer == 3) {
+        rc = [[ATERCWeb alloc] init];
+        rc.mRichContentType = kATERCTypeWebview;
+        rc.mRichContentHeight = 150;
+        ((ATERCWeb *) rc).mWebUrl = self.mSimpleWebView[arc4random() % self.mSimpleWebView.count];
     }
     
     [self.mRCView appendItem:rc];

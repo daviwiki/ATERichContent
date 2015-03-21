@@ -28,6 +28,7 @@ extern NSString *kATERCTypeImage;
 extern NSString *kATERCTypePhotoGallery;
 extern NSString *kATERCTypeWebview;
 extern NSString *kATERCTypeMap;
+extern NSString *kATERCTypeVideo;
 
 ///
 /// ATERCView Notifications

@@ -16,6 +16,7 @@ NSString *kATERCTypeImage = @"IMG";
 NSString *kATERCTypePhotoGallery = @"PHOTOGAL";
 NSString *kATERCTypeWebview = @"WEB";
 NSString *kATERCTypeMap = @"MAP";
+NSString *kATERCTypeVideo = @"VID";
 
 NSString *kATERCNewAliasIncludedNotificationKey = @"kATERCNewAliasIncludedKey";
 

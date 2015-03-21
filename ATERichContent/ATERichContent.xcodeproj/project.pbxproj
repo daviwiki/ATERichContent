@@ -33,6 +33,9 @@
 		46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CDDC871ABDEE3700DF38A3 /* ATEImageView.m */; };
 		46CDDC8B1ABDFE6100DF38A3 /* ATERCAttributedLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CDDC8A1ABDFE6100DF38A3 /* ATERCAttributedLabelView.m */; };
 		46CDDC8D1ABDFE7500DF38A3 /* ATERCAttributedLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CDDC8C1ABDFE7500DF38A3 /* ATERCAttributedLabelView.xib */; };
+		46CDDC901ABE05D900DF38A3 /* ATERCWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CDDC8F1ABE05D900DF38A3 /* ATERCWeb.m */; };
+		46CDDC931ABE064200DF38A3 /* ATERCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CDDC921ABE064200DF38A3 /* ATERCWebView.m */; };
+		46CDDC951ABE065E00DF38A3 /* ATERCWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CDDC941ABE065E00DF38A3 /* ATERCWebView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,11 @@
 		46CDDC891ABDFE6100DF38A3 /* ATERCAttributedLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCAttributedLabelView.h; sourceTree = "<group>"; };
 		46CDDC8A1ABDFE6100DF38A3 /* ATERCAttributedLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCAttributedLabelView.m; sourceTree = "<group>"; };
 		46CDDC8C1ABDFE7500DF38A3 /* ATERCAttributedLabelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCAttributedLabelView.xib; sourceTree = "<group>"; };
+		46CDDC8E1ABE05D900DF38A3 /* ATERCWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCWeb.h; sourceTree = "<group>"; };
+		46CDDC8F1ABE05D900DF38A3 /* ATERCWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCWeb.m; sourceTree = "<group>"; };
+		46CDDC911ABE064200DF38A3 /* ATERCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCWebView.h; sourceTree = "<group>"; };
+		46CDDC921ABE064200DF38A3 /* ATERCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCWebView.m; sourceTree = "<group>"; };
+		46CDDC941ABE065E00DF38A3 /* ATERCWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCWebView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +219,8 @@
 				468D06BC1AA8C03900DF59B2 /* ATERCAttributtedLabel.m */,
 				468D06C11AA8C07800DF59B2 /* ATERCGallery.h */,
 				468D06C21AA8C07800DF59B2 /* ATERCGallery.m */,
+				46CDDC8E1ABE05D900DF38A3 /* ATERCWeb.h */,
+				46CDDC8F1ABE05D900DF38A3 /* ATERCWeb.m */,
 			);
 			name = beansContents;
 			path = beans;
@@ -230,6 +240,9 @@
 				460524B61AA6336D00DE30AF /* ATERCImageView.h */,
 				460524B71AA6336D00DE30AF /* ATERCImageView.m */,
 				46CDDC831ABDEC3F00DF38A3 /* ATERCImageView.xib */,
+				46CDDC911ABE064200DF38A3 /* ATERCWebView.h */,
+				46CDDC921ABE064200DF38A3 /* ATERCWebView.m */,
+				46CDDC941ABE065E00DF38A3 /* ATERCWebView.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -360,6 +373,7 @@
 				4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */,
 				46CDDC841ABDEC3F00DF38A3 /* ATERCImageView.xib in Resources */,
 				46CDDC8D1ABDFE7500DF38A3 /* ATERCAttributedLabelView.xib in Resources */,
+				46CDDC951ABE065E00DF38A3 /* ATERCWebView.xib in Resources */,
 				460524BD1AA63BF800DE30AF /* ATERCLabelView.xib in Resources */,
 				4632BE951AA4DBFF00AE3A2B /* Images.xcassets in Resources */,
 			);
@@ -380,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4632BEC31AA4E5D100AE3A2B /* ATERCHelper.m in Sources */,
+				46CDDC931ABE064200DF38A3 /* ATERCWebView.m in Sources */,
 				468D06BD1AA8C03900DF59B2 /* ATERCAttributtedLabel.m in Sources */,
 				468D06C31AA8C07800DF59B2 /* ATERCGallery.m in Sources */,
 				46420F641ABAD885004D7845 /* ATERCManager.m in Sources */,
@@ -397,6 +412,7 @@
 				46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */,
 				46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */,
 				460524B81AA6336D00DE30AF /* ATERCImageView.m in Sources */,
+				46CDDC901ABE05D900DF38A3 /* ATERCWeb.m in Sources */,
 				4632BEBC1AA4DE6100AE3A2B /* ATERCLabelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,8 @@
 #import "ATERCLabelView.h"
 #import "ATERCImageView.h"
 #import "ATERCAttributedLabelView.h"
+#import "ATERCWebView.h"
+
 #import "ATERCLog.h"
 
 static ATERCManager *stInstance;
@@ -51,6 +53,13 @@ static ATERCManager *stInstance;
     c.mType = ATERCComponentTypeNib;
     c.mAlias = kATERCTypeAttributtedLabel;
     c.mReuseId = kATERCTypeAttributtedLabel;
+    [self addRichViewComponent:c];
+    
+    c = [[ATERCComponent alloc] init];
+    c.mName = NSStringFromClass([ATERCWebView class]);
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = kATERCTypeWebview;
+    c.mReuseId = kATERCTypeWebview;
     [self addRichViewComponent:c];
 }
 

@@ -20,6 +20,7 @@
 #import "ATERCImage.h"
 #import "ATERCAttributtedLabel.h"
 #import "ATERCGallery.h"
+#import "ATERCWeb.h"
 
 #import "ATERCContainerView.h"
 #import "ATERCView.h"
