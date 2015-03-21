@@ -28,4 +28,6 @@
 
 #import "ATERCLog.h"
 
+#import "ATEImageView.h"
+
 #endif

@@ -29,6 +29,8 @@
 		468D06BD1AA8C03900DF59B2 /* ATERCAttributtedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06BC1AA8C03900DF59B2 /* ATERCAttributtedLabel.m */; };
 		468D06C01AA8C06800DF59B2 /* ATERCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06BF1AA8C06800DF59B2 /* ATERCImage.m */; };
 		468D06C31AA8C07800DF59B2 /* ATERCGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06C21AA8C07800DF59B2 /* ATERCGallery.m */; };
+		46CDDC841ABDEC3F00DF38A3 /* ATERCImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46CDDC831ABDEC3F00DF38A3 /* ATERCImageView.xib */; };
+		46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CDDC871ABDEE3700DF38A3 /* ATEImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,9 @@
 		468D06BF1AA8C06800DF59B2 /* ATERCImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCImage.m; sourceTree = "<group>"; };
 		468D06C11AA8C07800DF59B2 /* ATERCGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCGallery.h; sourceTree = "<group>"; };
 		468D06C21AA8C07800DF59B2 /* ATERCGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCGallery.m; sourceTree = "<group>"; };
+		46CDDC831ABDEC3F00DF38A3 /* ATERCImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCImageView.xib; sourceTree = "<group>"; };
+		46CDDC861ABDEE3700DF38A3 /* ATEImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATEImageView.h; sourceTree = "<group>"; };
+		46CDDC871ABDEE3700DF38A3 /* ATEImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATEImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +177,7 @@
 				4632BEAF1AA4DC6F00AE3A2B /* beansContents */,
 				466404001ABB468D00DB5D60 /* header */,
 				4632BEBD1AA4DE6700AE3A2B /* helpers */,
+				46CDDC851ABDEDEF00DF38A3 /* support */,
 				4632BEAE1AA4DC4700AE3A2B /* views */,
 			);
 			path = ATERichContent;
@@ -215,6 +221,7 @@
 				460524BC1AA63BF800DE30AF /* ATERCLabelView.xib */,
 				460524B61AA6336D00DE30AF /* ATERCImageView.h */,
 				460524B71AA6336D00DE30AF /* ATERCImageView.m */,
+				46CDDC831ABDEC3F00DF38A3 /* ATERCImageView.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -250,6 +257,15 @@
 				468D06B61AA8BFD800DF59B2 /* ATERCComponent.m */,
 			);
 			path = beansCompontent;
+			sourceTree = "<group>";
+		};
+		46CDDC851ABDEDEF00DF38A3 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				46CDDC861ABDEE3700DF38A3 /* ATEImageView.h */,
+				46CDDC871ABDEE3700DF38A3 /* ATEImageView.m */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +350,7 @@
 			files = (
 				4632BE931AA4DBFF00AE3A2B /* Main.storyboard in Resources */,
 				4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */,
+				46CDDC841ABDEC3F00DF38A3 /* ATERCImageView.xib in Resources */,
 				460524BD1AA63BF800DE30AF /* ATERCLabelView.xib in Resources */,
 				4632BE951AA4DBFF00AE3A2B /* Images.xcassets in Resources */,
 			);
@@ -368,6 +385,7 @@
 				4632BEC01AA4DE8900AE3A2B /* ATERCConstants.m in Sources */,
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
 				46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */,
+				46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */,
 				460524B81AA6336D00DE30AF /* ATERCImageView.m in Sources */,
 				4632BEBC1AA4DE6100AE3A2B /* ATERCLabelView.m in Sources */,
 			);

@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString *mImageUrl;
 
+@property (copy) UIImage *(^mImageLoadBlock)(NSString *imageUrl);
+
 @end
