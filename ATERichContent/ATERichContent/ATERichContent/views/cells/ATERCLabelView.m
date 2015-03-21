@@ -38,7 +38,8 @@ static ATERCLabelView *stDummyInstance;
     stDummyInstance.frame = frame;
     
     [stDummyInstance showContent:content];
-    CGRect rect = [stDummyInstance.mTextLabel.text boundingRectWithSize:CGSizeMake(stDummyInstance.mTextLabel.frame.size.width, MAXFLOAT)
+    CGFloat width = stDummyInstance.mTextLabel.frame.size.width;
+    CGRect rect = [stDummyInstance.mTextLabel.text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
                                                                 options:NSStringDrawingUsesLineFragmentOrigin
                                                              attributes:@{
                                                                           NSFontAttributeName:stDummyInstance.mTextLabel.font
