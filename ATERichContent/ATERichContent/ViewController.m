@@ -32,7 +32,7 @@
 }
 
 - (IBAction) actionInsertATERCItem:(id)sender {
-    NSInteger numberOfViewers = 2;
+    NSInteger numberOfViewers = 3;
     NSInteger viewer = arc4random() % numberOfViewers;
     
     ATERC *rc = nil;
@@ -52,6 +52,31 @@
         };
         
         ((ATERCImage *)rc).mImageUrl = self.mSimpleImages[arc4random() % self.mSimpleImages.count];
+    } else if (viewer == 2) {
+        rc = [[ATERCAttributtedLabel alloc] init];
+        rc.mRichContentType = kATERCTypeAttributtedLabel;
+        rc.mRichContentHeight = kATERCWrapContentHeight;
+        
+        NSString *text = self.mSimpleTexts[arc4random() % self.mSimpleTexts.count];
+        NSMutableAttributedString *aText = [[NSMutableAttributedString alloc] initWithString:text];
+        UIColor *color = [UIColor colorWithRed:(arc4random()%256)/255.0
+                                         green:(arc4random()%256)/255.0
+                                          blue:(arc4random()%256)/255.0
+                                         alpha:1];
+        NSInteger interval = text.length/3;
+        [aText addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, interval)];
+        color = [UIColor colorWithRed:(arc4random()%256)/255.0
+                                green:(arc4random()%256)/255.0
+                                 blue:(arc4random()%256)/255.0
+                                alpha:1];
+        [aText addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(interval, interval)];
+        color = [UIColor colorWithRed:(arc4random()%256)/255.0
+                                green:(arc4random()%256)/255.0
+                                 blue:(arc4random()%256)/255.0
+                                alpha:1];
+        [aText addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(2*interval, interval)];
+        
+        ((ATERCAttributtedLabel *) rc).mAttributedText = aText;
     }
     
     [self.mRCView appendItem:rc];

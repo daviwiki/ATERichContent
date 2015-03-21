@@ -13,6 +13,7 @@
 
 #import "ATERCLabelView.h"
 #import "ATERCImageView.h"
+#import "ATERCAttributedLabelView.h"
 #import "ATERCLog.h"
 
 static ATERCManager *stInstance;
@@ -43,6 +44,13 @@ static ATERCManager *stInstance;
     c.mType = ATERCComponentTypeNib;
     c.mAlias = kATERCTypeImage;
     c.mReuseId = kATERCTypeImage;
+    [self addRichViewComponent:c];
+    
+    c = [[ATERCComponent alloc] init];
+    c.mName = NSStringFromClass([ATERCAttributedLabelView class]);
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = kATERCTypeAttributtedLabel;
+    c.mReuseId = kATERCTypeAttributtedLabel;
     [self addRichViewComponent:c];
 }
 
