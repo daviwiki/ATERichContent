@@ -46,6 +46,11 @@
 }
 
 - (void) showContent:(ATERCImage *)content {
+    if (![self validateContent:content]) {
+        [ATERCLog log:@"Invalid class type excepected for content into ATERCImageView class"];
+        return;
+    }
+    
     self.mContent = content;
     [self drawContent:content];
 }
