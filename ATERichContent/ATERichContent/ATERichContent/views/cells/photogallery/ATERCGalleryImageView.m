@@ -7,6 +7,7 @@
 //
 
 #import "ATERCGalleryImageView.h"
+#import "ATERCGalleryCollectionViewCell.h"
 #import "ATERCHeaders.h"
 
 CGFloat kATERCGalleryCollectionInset = 8.0;
@@ -23,7 +24,7 @@ CGFloat kATERCGalleryCollectionInset = 8.0;
 #pragma mark - -------------------- IMPLEMENTATION ---------------------
 #pragma mark - ---- Internal
 - (void) mountViews {
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass([ATERCImageView class]) bundle:nil];
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([ATERCGalleryCollectionViewCell class]) bundle:nil];
     [self.mImagesCollectionView registerNib:nib forCellWithReuseIdentifier:kATERCTypeImage];
 }
 
@@ -49,7 +50,7 @@ CGFloat kATERCGalleryCollectionInset = 8.0;
         [ATERCLog log:@"Invalid class type excepected for content into ATERCGalleryImageView class"];
         return;
     }
-    [self mountViews];
+
     self.mContent = content;
     [self drawContent:content];
 }
@@ -65,13 +66,14 @@ CGFloat kATERCGalleryCollectionInset = 8.0;
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ATERCImageView *cell = (ATERCImageView *) [collectionView dequeueReusableCellWithReuseIdentifier:kATERCTypeImage
-                                                                                        forIndexPath:indexPath];
+    ATERCGalleryCollectionViewCell *cell = (ATERCGalleryCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kATERCTypeImage
+                                                                                                                        forIndexPath:indexPath];
     ATERCImage *content = [[ATERCImage alloc] init];
     content.mRichContentHeight = self.mContent.mRichContentHeight;
     content.mRichContentWidth = self.mContent.mRichContentWidth;
     content.mRichContentType = kATERCTypeImage;
     content.mImageUrl = self.mContent.mImagesUrl[indexPath.row];
+    content.mImageLoadBlock = self.mContent.mImageLoadBlock;
     [cell showContent:content];
     return cell;
 }
@@ -91,5 +93,8 @@ CGFloat kATERCGalleryCollectionInset = 8.0;
 }
 
 #pragma mark - -------------------- LIFECICLE ---------------------
+- (void) awakeFromNib {
+    [self mountViews];
+}
 
 @end

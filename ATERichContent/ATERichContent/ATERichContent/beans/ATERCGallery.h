@@ -11,5 +11,6 @@
 @interface ATERCGallery : ATERC
 
 @property (nonatomic, strong) NSArray *mImagesUrl; // Array (String)
+@property (copy) UIImage *(^mImageLoadBlock)(NSString *imageUrl);
 
 @end

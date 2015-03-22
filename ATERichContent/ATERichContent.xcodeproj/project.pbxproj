@@ -18,6 +18,8 @@
 		461B96611ABEDEDF0089178B /* ATERCLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96541ABEDEDF0089178B /* ATERCLabelView.xib */; };
 		461B96621ABEDEDF0089178B /* ATERCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B96571ABEDEDF0089178B /* ATERCWebView.m */; };
 		461B96631ABEDEDF0089178B /* ATERCWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96581ABEDEDF0089178B /* ATERCWebView.xib */; };
+		461B96671ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B96651ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m */; };
+		461B96681ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96661ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib */; };
 		4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE891AA4DBFF00AE3A2B /* main.m */; };
 		4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8C1AA4DBFF00AE3A2B /* AppDelegate.m */; };
 		4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8F1AA4DBFF00AE3A2B /* ViewController.m */; };
@@ -68,6 +70,9 @@
 		461B96561ABEDEDF0089178B /* ATERCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCWebView.h; sourceTree = "<group>"; };
 		461B96571ABEDEDF0089178B /* ATERCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCWebView.m; sourceTree = "<group>"; };
 		461B96581ABEDEDF0089178B /* ATERCWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCWebView.xib; sourceTree = "<group>"; };
+		461B96641ABEE04B0089178B /* ATERCGalleryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCGalleryCollectionViewCell.h; sourceTree = "<group>"; };
+		461B96651ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCGalleryCollectionViewCell.m; sourceTree = "<group>"; };
+		461B96661ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		4632BE841AA4DBFF00AE3A2B /* ATERichContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATERichContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4632BE881AA4DBFF00AE3A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4632BE891AA4DBFF00AE3A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -165,6 +170,9 @@
 		461B964D1ABEDEDF0089178B /* photogallery */ = {
 			isa = PBXGroup;
 			children = (
+				461B96641ABEE04B0089178B /* ATERCGalleryCollectionViewCell.h */,
+				461B96651ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m */,
+				461B96661ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib */,
 				461B964E1ABEDEDF0089178B /* ATERCGalleryImageView.h */,
 				461B964F1ABEDEDF0089178B /* ATERCGalleryImageView.m */,
 				461B96501ABEDEDF0089178B /* ATERCGalleryImageView.xib */,
@@ -420,6 +428,7 @@
 				4632BE931AA4DBFF00AE3A2B /* Main.storyboard in Resources */,
 				461B96631ABEDEDF0089178B /* ATERCWebView.xib in Resources */,
 				4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */,
+				461B96681ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib in Resources */,
 				461B965D1ABEDEDF0089178B /* ATERCImageView.xib in Resources */,
 				461B965F1ABEDEDF0089178B /* ATERCGalleryImageView.xib in Resources */,
 				461B96611ABEDEDF0089178B /* ATERCLabelView.xib in Resources */,
@@ -462,6 +471,7 @@
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
 				46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */,
 				46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */,
+				461B96671ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m in Sources */,
 				46CDDC901ABE05D900DF38A3 /* ATERCWeb.m in Sources */,
 				461B96621ABEDEDF0089178B /* ATERCWebView.m in Sources */,
 			);
