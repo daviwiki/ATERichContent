@@ -21,6 +21,8 @@
 #pragma mark - -------------------- IMPLEMENTATION ---------------------
 #pragma mark - ---- Internal
 - (void) drawContent:(ATERCImage *) content {
+    self.mImageView.image = nil;
+    
     if (content.mImageLoadBlock != nil) {
         self.mImageView.mActivityIndicator.hidden = NO;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
