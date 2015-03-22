@@ -18,8 +18,10 @@
  * @function
  * getHeightForContent:andComponent:
  * @brief <p>Returnt the contents height 
- * for this content and compontent</p>
+ * for the content given</p>
  * @note <p>If something goes wrong, return 0</p>
+ * @note <p>Must be override by subclasses to define the
+ * the height for the content</p>
  * @param content, not null
  */
 + (NSNumber *) getHeightForContent:(ATERC *) content;
@@ -28,7 +30,10 @@
  * @function
  * validateContent:
  * @brief
- * <p></p>
+ * <p>Define if 'content' is a valid instance for
+ * the ATERCView instance</p>
+ * @note <p>Must be override by subclasses to define the
+ * the height for the content</p>
  */
 - (BOOL) validateContent:(ATERC *) content;
 
@@ -36,7 +41,9 @@
  * @function
  * showContent:
  * @brief
- * <p></p>
+ * <p>Display the content given</p>
+ * @note <p>Must be override by subclasses to define the
+ * the height for the content</p>
  */
 - (void) showContent:(ATERC *) content;
 
