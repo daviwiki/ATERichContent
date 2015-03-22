@@ -10,6 +10,8 @@
 		460524B81AA6336D00DE30AF /* ATERCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524B71AA6336D00DE30AF /* ATERCImageView.m */; };
 		460524BD1AA63BF800DE30AF /* ATERCLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 460524BC1AA63BF800DE30AF /* ATERCLabelView.xib */; };
 		460524C01AA63E0700DE30AF /* ATERCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 460524BF1AA63E0700DE30AF /* ATERCView.m */; };
+		461B963E1ABEBA380089178B /* ATERCGalleryImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B963D1ABEBA380089178B /* ATERCGalleryImageView.xib */; };
+		461B96411ABEBABE0089178B /* ATERCGalleryImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B96401ABEBABE0089178B /* ATERCGalleryImageView.m */; };
 		4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE891AA4DBFF00AE3A2B /* main.m */; };
 		4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8C1AA4DBFF00AE3A2B /* AppDelegate.m */; };
 		4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8F1AA4DBFF00AE3A2B /* ViewController.m */; };
@@ -54,6 +56,9 @@
 		460524BC1AA63BF800DE30AF /* ATERCLabelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCLabelView.xib; sourceTree = "<group>"; };
 		460524BE1AA63E0700DE30AF /* ATERCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCView.h; sourceTree = "<group>"; };
 		460524BF1AA63E0700DE30AF /* ATERCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCView.m; sourceTree = "<group>"; };
+		461B963D1ABEBA380089178B /* ATERCGalleryImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCGalleryImageView.xib; sourceTree = "<group>"; };
+		461B963F1ABEBABE0089178B /* ATERCGalleryImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCGalleryImageView.h; sourceTree = "<group>"; };
+		461B96401ABEBABE0089178B /* ATERCGalleryImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCGalleryImageView.m; sourceTree = "<group>"; };
 		4632BE841AA4DBFF00AE3A2B /* ATERichContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATERichContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4632BE881AA4DBFF00AE3A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4632BE891AA4DBFF00AE3A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -243,6 +248,9 @@
 				46CDDC911ABE064200DF38A3 /* ATERCWebView.h */,
 				46CDDC921ABE064200DF38A3 /* ATERCWebView.m */,
 				46CDDC941ABE065E00DF38A3 /* ATERCWebView.xib */,
+				461B963F1ABEBABE0089178B /* ATERCGalleryImageView.h */,
+				461B96401ABEBABE0089178B /* ATERCGalleryImageView.m */,
+				461B963D1ABEBA380089178B /* ATERCGalleryImageView.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				46CDDC951ABE065E00DF38A3 /* ATERCWebView.xib in Resources */,
 				460524BD1AA63BF800DE30AF /* ATERCLabelView.xib in Resources */,
 				4632BE951AA4DBFF00AE3A2B /* Images.xcassets in Resources */,
+				461B963E1ABEBA380089178B /* ATERCGalleryImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +405,7 @@
 				4632BEC31AA4E5D100AE3A2B /* ATERCHelper.m in Sources */,
 				46CDDC931ABE064200DF38A3 /* ATERCWebView.m in Sources */,
 				468D06BD1AA8C03900DF59B2 /* ATERCAttributtedLabel.m in Sources */,
+				461B96411ABEBABE0089178B /* ATERCGalleryImageView.m in Sources */,
 				468D06C31AA8C07800DF59B2 /* ATERCGallery.m in Sources */,
 				46420F641ABAD885004D7845 /* ATERCManager.m in Sources */,
 				4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */,

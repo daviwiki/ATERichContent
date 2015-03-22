@@ -15,6 +15,7 @@
 #import "ATERCImageView.h"
 #import "ATERCAttributedLabelView.h"
 #import "ATERCWebView.h"
+#import "ATERCGalleryImageView.h"
 
 #import "ATERCLog.h"
 
@@ -60,6 +61,13 @@ static ATERCManager *stInstance;
     c.mType = ATERCComponentTypeNib;
     c.mAlias = kATERCTypeWebview;
     c.mReuseId = kATERCTypeWebview;
+    [self addRichViewComponent:c];
+    
+    c = [[ATERCComponent alloc] init];
+    c.mName = NSStringFromClass([ATERCGalleryImageView class]);
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = kATERCTypePhotoGallery;
+    c.mReuseId = kATERCTypePhotoGallery;
     [self addRichViewComponent:c];
 }
 

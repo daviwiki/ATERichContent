@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PHOTOGAL" id="Txl-ud-zRC" customClass="ATERCGalleryImageView">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-8s-XuT" userLabel="View - background">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f3J-QE-dX7">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YUQ-sK-wEK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="Txl-ud-zRC" id="xJo-oj-1z1"/>
+                                    <outlet property="delegate" destination="Txl-ud-zRC" id="fA3-Xg-WZL"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xKh-ti-bVg">
+                                <rect key="frame" x="110" y="13" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f3J-QE-dX7" firstAttribute="top" secondItem="W7c-8s-XuT" secondAttribute="top" id="8o6-C2-wzJ"/>
+                            <constraint firstAttribute="centerX" secondItem="xKh-ti-bVg" secondAttribute="centerX" id="Ck8-vh-ZGm"/>
+                            <constraint firstAttribute="bottom" secondItem="xKh-ti-bVg" secondAttribute="bottom" id="MHg-st-cAN"/>
+                            <constraint firstAttribute="bottom" secondItem="f3J-QE-dX7" secondAttribute="bottom" id="NUx-ft-XjI"/>
+                            <constraint firstAttribute="trailing" secondItem="f3J-QE-dX7" secondAttribute="trailing" id="qq9-VK-P5k"/>
+                            <constraint firstItem="f3J-QE-dX7" firstAttribute="leading" secondItem="W7c-8s-XuT" secondAttribute="leading" id="sGD-rP-rVt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="W7c-8s-XuT" firstAttribute="top" secondItem="Txl-ud-zRC" secondAttribute="top" id="EIq-dG-MSy"/>
+                <constraint firstItem="W7c-8s-XuT" firstAttribute="leading" secondItem="Txl-ud-zRC" secondAttribute="leading" id="PHE-Sz-jKr"/>
+                <constraint firstAttribute="bottom" secondItem="W7c-8s-XuT" secondAttribute="bottom" id="ccs-da-yCb"/>
+                <constraint firstAttribute="trailing" secondItem="W7c-8s-XuT" secondAttribute="trailing" id="hPS-Kd-zNT"/>
+            </constraints>
+            <size key="customSize" width="260" height="50"/>
+            <connections>
+                <outlet property="mBackgroundView" destination="W7c-8s-XuT" id="cas-cW-lGx"/>
+                <outlet property="mImagesCollectionView" destination="f3J-QE-dX7" id="STh-gd-8Wr"/>
+                <outlet property="mImagesPageControl" destination="xKh-ti-bVg" id="a1L-sN-c6V"/>
+            </connections>
+            <point key="canvasLocation" x="375" y="287"/>
+        </collectionViewCell>
+    </objects>
+</document>

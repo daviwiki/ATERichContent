@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSArray *mSimpleTexts;
 @property (nonatomic, strong) NSArray *mSimpleImages;
 @property (nonatomic, strong) NSArray *mSimpleWebView;
+@property (nonatomic, strong) NSArray *mSimpleGallery;
 
 @end
 
@@ -34,10 +35,27 @@
     self.mSimpleWebView = @[@"http://www.google.es",
                             @"http://www.twitter.com",
                             @"http://www.facebook.com"];
+    
+    self.mSimpleGallery = @[
+                            @[@"http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg",
+                              @"http://media4.popsugar-assets.com/files/2014/08/08/878/n/1922507/caef16ec354ca23b_thumb_temp_cover_file32304521407524949.xxxlarge/i/Funny-Cat-GIFs.jpg",
+                              @"http://freedwallpaper.com/wp-content/uploads/2014/11/cat-wallpapers-for-desktop-2-1366x768-770958.jpg",
+                              @"http://media4.popsugar-assets.com/files/2014/08/08/878/n/1922507/caef16ec354ca23b_thumb_temp_cover_file32304521407524949.xxxlarge/i/Funny-Cat-GIFs.jpg",
+                              ],
+                            @[@"http://media4.popsugar-assets.com/files/2014/08/08/878/n/1922507/caef16ec354ca23b_thumb_temp_cover_file32304521407524949.xxxlarge/i/Funny-Cat-GIFs.jpg",
+                              @"http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg",
+                              @"http://freedwallpaper.com/wp-content/uploads/2014/11/cat-wallpapers-for-desktop-2-1366x768-770958.jpg",
+                              ],
+                            @[@"http://media4.popsugar-assets.com/files/2014/08/08/878/n/1922507/caef16ec354ca23b_thumb_temp_cover_file32304521407524949.xxxlarge/i/Funny-Cat-GIFs.jpg",
+                              @"http://freedwallpaper.com/wp-content/uploads/2014/11/cat-wallpapers-for-desktop-2-1366x768-770958.jpg",
+                              @"http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg",
+                              @"http://freedwallpaper.com/wp-content/uploads/2014/11/cat-wallpapers-for-desktop-2-1366x768-770958.jpg",
+                              @"http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg"],
+                            ];
 }
 
 - (IBAction) actionInsertATERCItem:(id)sender {
-    NSInteger numberOfViewers = 4;
+    NSInteger numberOfViewers = 5;
     NSInteger viewer = arc4random() % numberOfViewers;
     
     ATERC *rc = nil;
@@ -87,6 +105,11 @@
         rc.mRichContentType = kATERCTypeWebview;
         rc.mRichContentHeight = 150;
         ((ATERCWeb *) rc).mWebUrl = self.mSimpleWebView[arc4random() % self.mSimpleWebView.count];
+    } else if (viewer == 4) {
+        rc = [[ATERCGallery alloc] init];
+        rc.mRichContentType = kATERCTypePhotoGallery;
+        rc.mRichContentHeight = 150;
+        ((ATERCGallery *)rc).mImagesUrl = self.mSimpleGallery[arc4random() % self.mSimpleGallery.count];
     }
     
     [self.mRCView appendItem:rc];
