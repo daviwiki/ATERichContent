@@ -56,7 +56,7 @@ static NSMutableDictionary *stAliasToClassRelations = nil;
 + (NSNumber *) getHeightForContent:(ATERC *) content
                       andComponent:(ATERCComponent *) compontent {
     if (content.mRichContentHeight != kATERCWrapContentHeight) {
-        return @(content.mRichContentHeight);
+        return @(ABS(content.mRichContentHeight));
     }
     
     if (compontent.mType == ATERCComponentTypeClass) {
