@@ -8,6 +8,10 @@
 
 #import "ATERCView.h"
 
+@class ATEImageView;
+
 @interface ATERCImageView : ATERCView
+
+@property (nonatomic, weak) IBOutlet ATEImageView *mImageView;
 
 @end

@@ -14,9 +14,6 @@
 /// Datas
 @property (nonatomic, strong) ATERCImage *mContent;
 
-/// Outlets
-@property (nonatomic, weak) IBOutlet ATEImageView *mImageView;
-
 @end
 
 @implementation ATERCImageView
