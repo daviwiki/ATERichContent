@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSArray *mSimpleImages;
 @property (nonatomic, strong) NSArray *mSimpleWebView;
 @property (nonatomic, strong) NSArray *mSimpleGallery;
+@property (nonatomic, strong) NSArray *mSimpleVideo;
 
 @end
 
@@ -52,12 +53,15 @@
                               @"http://freedwallpaper.com/wp-content/uploads/2014/11/cat-wallpapers-for-desktop-2-1366x768-770958.jpg",
                               @"http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg"],
                             ];
+    
+    self.mSimpleVideo = @[@"http://techslides.com/demos/sample-videos/small.mp4"];
 }
 
 - (IBAction) actionInsertATERCItem:(id)sender {
-    NSInteger numberOfViewers = 5;
+    NSInteger numberOfViewers = 6;
     NSInteger viewer = arc4random() % numberOfViewers;
     
+    viewer = 5;
     ATERC *rc = nil;
     if (viewer == 0) {
         rc = [[ATERCLabel alloc] init];
@@ -110,6 +114,11 @@
         rc.mRichContentType = kATERCTypePhotoGallery;
         rc.mRichContentHeight = 150;
         ((ATERCGallery *)rc).mImagesUrl = self.mSimpleGallery[arc4random() % self.mSimpleGallery.count];
+    } else if (viewer == 5) {
+        rc = [[ATERCVideo alloc] init];
+        rc.mRichContentType = kATERCTypeVideo;
+        rc.mRichContentHeight = 150.0;
+        ((ATERCVideo *)rc).mVideoUrl = self.mSimpleVideo[arc4random() % self.mSimpleVideo.count];
     }
     
     [self.mRCView appendItem:rc];

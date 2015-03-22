@@ -20,6 +20,9 @@
 		461B96631ABEDEDF0089178B /* ATERCWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96581ABEDEDF0089178B /* ATERCWebView.xib */; };
 		461B96671ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B96651ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m */; };
 		461B96681ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96661ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib */; };
+		461B966B1ABEE5C90089178B /* ATERCVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B966A1ABEE5C90089178B /* ATERCVideo.m */; };
+		461B966F1ABEE6630089178B /* ATERCVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B966E1ABEE6630089178B /* ATERCVideoView.m */; };
+		461B96711ABEE6770089178B /* ATERCVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96701ABEE6770089178B /* ATERCVideoView.xib */; };
 		4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE891AA4DBFF00AE3A2B /* main.m */; };
 		4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8C1AA4DBFF00AE3A2B /* AppDelegate.m */; };
 		4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8F1AA4DBFF00AE3A2B /* ViewController.m */; };
@@ -73,6 +76,11 @@
 		461B96641ABEE04B0089178B /* ATERCGalleryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCGalleryCollectionViewCell.h; sourceTree = "<group>"; };
 		461B96651ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCGalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		461B96661ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		461B96691ABEE5C90089178B /* ATERCVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCVideo.h; sourceTree = "<group>"; };
+		461B966A1ABEE5C90089178B /* ATERCVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCVideo.m; sourceTree = "<group>"; };
+		461B966D1ABEE6630089178B /* ATERCVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCVideoView.h; sourceTree = "<group>"; };
+		461B966E1ABEE6630089178B /* ATERCVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCVideoView.m; sourceTree = "<group>"; };
+		461B96701ABEE6770089178B /* ATERCVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCVideoView.xib; sourceTree = "<group>"; };
 		4632BE841AA4DBFF00AE3A2B /* ATERichContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATERichContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4632BE881AA4DBFF00AE3A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4632BE891AA4DBFF00AE3A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 				461B96491ABEDEDF0089178B /* image */,
 				461B964D1ABEDEDF0089178B /* photogallery */,
 				461B96511ABEDEDF0089178B /* textlabel */,
+				461B966C1ABEE5D50089178B /* video */,
 				461B96551ABEDEDF0089178B /* webview */,
 			);
 			path = cells;
@@ -198,6 +207,16 @@
 				461B96581ABEDEDF0089178B /* ATERCWebView.xib */,
 			);
 			path = webview;
+			sourceTree = "<group>";
+		};
+		461B966C1ABEE5D50089178B /* video */ = {
+			isa = PBXGroup;
+			children = (
+				461B966D1ABEE6630089178B /* ATERCVideoView.h */,
+				461B966E1ABEE6630089178B /* ATERCVideoView.m */,
+				461B96701ABEE6770089178B /* ATERCVideoView.xib */,
+			);
+			path = video;
 			sourceTree = "<group>";
 		};
 		4632BE7B1AA4DBFF00AE3A2B = {
@@ -296,6 +315,8 @@
 				468D06BC1AA8C03900DF59B2 /* ATERCAttributtedLabel.m */,
 				468D06C11AA8C07800DF59B2 /* ATERCGallery.h */,
 				468D06C21AA8C07800DF59B2 /* ATERCGallery.m */,
+				461B96691ABEE5C90089178B /* ATERCVideo.h */,
+				461B966A1ABEE5C90089178B /* ATERCVideo.m */,
 				46CDDC8E1ABE05D900DF38A3 /* ATERCWeb.h */,
 				46CDDC8F1ABE05D900DF38A3 /* ATERCWeb.m */,
 			);
@@ -429,6 +450,7 @@
 				461B96631ABEDEDF0089178B /* ATERCWebView.xib in Resources */,
 				4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */,
 				461B96681ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib in Resources */,
+				461B96711ABEE6770089178B /* ATERCVideoView.xib in Resources */,
 				461B965D1ABEDEDF0089178B /* ATERCImageView.xib in Resources */,
 				461B965F1ABEDEDF0089178B /* ATERCGalleryImageView.xib in Resources */,
 				461B96611ABEDEDF0089178B /* ATERCLabelView.xib in Resources */,
@@ -464,9 +486,11 @@
 				461B96601ABEDEDF0089178B /* ATERCLabelView.m in Sources */,
 				468D06C01AA8C06800DF59B2 /* ATERCImage.m in Sources */,
 				461B965C1ABEDEDF0089178B /* ATERCImageView.m in Sources */,
+				461B966B1ABEE5C90089178B /* ATERCVideo.m in Sources */,
 				4632BEB81AA4DCE200AE3A2B /* ATERCContainerView.m in Sources */,
 				468D06BA1AA8C00C00DF59B2 /* ATERCLabel.m in Sources */,
 				4632BEC01AA4DE8900AE3A2B /* ATERCConstants.m in Sources */,
+				461B966F1ABEE6630089178B /* ATERCVideoView.m in Sources */,
 				461B965E1ABEDEDF0089178B /* ATERCGalleryImageView.m in Sources */,
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
 				46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */,

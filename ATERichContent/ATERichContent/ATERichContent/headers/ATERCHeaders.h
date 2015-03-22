@@ -21,11 +21,15 @@
 #import "ATERCAttributtedLabel.h"
 #import "ATERCGallery.h"
 #import "ATERCWeb.h"
+#import "ATERCVideo.h"
 
 #import "ATERCContainerView.h"
 #import "ATERCView.h"
 #import "ATERCLabelView.h"
+#import "ATERCAttributedLabelView.h"
 #import "ATERCImageView.h"
+#import "ATERCGalleryImageView.h"
+#import "ATERCVideoView.h"
 
 #import "ATERCLog.h"
 
