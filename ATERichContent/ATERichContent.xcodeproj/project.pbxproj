@@ -36,6 +36,8 @@
 		4632BEC31AA4E5D100AE3A2B /* ATERCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BEC21AA4E5D100AE3A2B /* ATERCHelper.m */; };
 		46420F641ABAD885004D7845 /* ATERCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46420F631ABAD885004D7845 /* ATERCManager.m */; };
 		46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 46420F661ABAD96C004D7845 /* ATERCLog.m */; };
+		467B56041AC854FA00C56B06 /* ATERandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467B56031AC854FA00C56B06 /* ATERandomViewController.m */; };
+		467B56071AC855E400C56B06 /* ATECustomComponentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467B56061AC855E400C56B06 /* ATECustomComponentsViewController.m */; };
 		468D06B71AA8BFD800DF59B2 /* ATERCComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06B61AA8BFD800DF59B2 /* ATERCComponent.m */; };
 		468D06BA1AA8C00C00DF59B2 /* ATERCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06B91AA8C00C00DF59B2 /* ATERCLabel.m */; };
 		468D06BD1AA8C03900DF59B2 /* ATERCAttributtedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D06BC1AA8C03900DF59B2 /* ATERCAttributtedLabel.m */; };
@@ -107,6 +109,10 @@
 		46420F651ABAD96C004D7845 /* ATERCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCLog.h; sourceTree = "<group>"; };
 		46420F661ABAD96C004D7845 /* ATERCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCLog.m; sourceTree = "<group>"; };
 		466404011ABB46B000DB5D60 /* ATERCHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATERCHeaders.h; sourceTree = "<group>"; };
+		467B56021AC854FA00C56B06 /* ATERandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERandomViewController.h; sourceTree = "<group>"; };
+		467B56031AC854FA00C56B06 /* ATERandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERandomViewController.m; sourceTree = "<group>"; };
+		467B56051AC855E400C56B06 /* ATECustomComponentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATECustomComponentsViewController.h; sourceTree = "<group>"; };
+		467B56061AC855E400C56B06 /* ATECustomComponentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATECustomComponentsViewController.m; sourceTree = "<group>"; };
 		468D06B51AA8BFD800DF59B2 /* ATERCComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCComponent.h; sourceTree = "<group>"; };
 		468D06B61AA8BFD800DF59B2 /* ATERCComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCComponent.m; sourceTree = "<group>"; };
 		468D06B81AA8C00C00DF59B2 /* ATERCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCLabel.h; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 		4632BE861AA4DBFF00AE3A2B /* ATERichContent */ = {
 			isa = PBXGroup;
 			children = (
+				467B56011AC8549000C56B06 /* ATESamples */,
 				4632BEAD1AA4DC0800AE3A2B /* ATERichContent */,
 				4632BE8B1AA4DBFF00AE3A2B /* AppDelegate.h */,
 				4632BE8C1AA4DBFF00AE3A2B /* AppDelegate.m */,
@@ -346,6 +353,17 @@
 			);
 			name = header;
 			path = headers;
+			sourceTree = "<group>";
+		};
+		467B56011AC8549000C56B06 /* ATESamples */ = {
+			isa = PBXGroup;
+			children = (
+				467B56021AC854FA00C56B06 /* ATERandomViewController.h */,
+				467B56031AC854FA00C56B06 /* ATERandomViewController.m */,
+				467B56051AC855E400C56B06 /* ATECustomComponentsViewController.h */,
+				467B56061AC855E400C56B06 /* ATECustomComponentsViewController.m */,
+			);
+			path = ATESamples;
 			sourceTree = "<group>";
 		};
 		468D06B41AA8BF9200DF59B2 /* beansCompontent */ = {
@@ -485,6 +503,7 @@
 				461B96591ABEDEDF0089178B /* ATERCView.m in Sources */,
 				461B96601ABEDEDF0089178B /* ATERCLabelView.m in Sources */,
 				468D06C01AA8C06800DF59B2 /* ATERCImage.m in Sources */,
+				467B56071AC855E400C56B06 /* ATECustomComponentsViewController.m in Sources */,
 				461B965C1ABEDEDF0089178B /* ATERCImageView.m in Sources */,
 				461B966B1ABEE5C90089178B /* ATERCVideo.m in Sources */,
 				4632BEB81AA4DCE200AE3A2B /* ATERCContainerView.m in Sources */,
@@ -495,6 +514,7 @@
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
 				46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */,
 				46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */,
+				467B56041AC854FA00C56B06 /* ATERandomViewController.m in Sources */,
 				461B96671ABEE04B0089178B /* ATERCGalleryCollectionViewCell.m in Sources */,
 				46CDDC901ABE05D900DF38A3 /* ATERCWeb.m in Sources */,
 				461B96621ABEDEDF0089178B /* ATERCWebView.m in Sources */,
