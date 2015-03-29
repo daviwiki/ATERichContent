@@ -71,12 +71,12 @@ static ATERCManager *stInstance;
     c.mReuseId = kATERCTypePhotoGallery;
     [self addRichViewComponent:c];
     
-//    c = [[ATERCComponent alloc] init];
-//    c.mName = NSStringFromClass([ATERCVideoView class]);
-//    c.mType = ATERCComponentTypeNib;
-//    c.mAlias = kATERCTypeVideo;
-//    c.mReuseId = kATERCTypeVideo;
-//    [self addRichViewComponent:c];
+    c = [[ATERCComponent alloc] init];
+    c.mName = NSStringFromClass([ATERCVideoView class]);
+    c.mType = ATERCComponentTypeNib;
+    c.mAlias = kATERCTypeVideo;
+    c.mReuseId = kATERCTypeVideo;
+    [self addRichViewComponent:c];
 }
 
 #pragma mark - ---- Services

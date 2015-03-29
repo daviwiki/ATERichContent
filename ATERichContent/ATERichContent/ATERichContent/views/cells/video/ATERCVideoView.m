@@ -10,8 +10,6 @@
 #import "ATERCHeaders.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-static NSString *kATERCVideoStartNotification = @"kATERCVideoStartNotification";
-
 @interface ATERCVideoView ()
 
 /// Outlets
@@ -20,15 +18,13 @@ static NSString *kATERCVideoStartNotification = @"kATERCVideoStartNotification";
 /// Datas
 @property (nonatomic, strong) ATERCVideo *mContent;
 
-@property (nonatomic, strong) NSMutableSet *mObservers;
-
 @end
 
 @implementation ATERCVideoView
 
 #pragma mark - -------------------- IMPLEMENTATION ---------------------
 #pragma mark - ---- Internal
-- (void) drawContent:(ATERCVideo *) content {
+- (void) mountViews {
     if (!self.mMoviePlayer) {
         // Cooking movieplayer
         self.mMoviePlayer = [[MPMoviePlayerController alloc] init];
@@ -53,55 +49,10 @@ static NSString *kATERCVideoStartNotification = @"kATERCVideoStartNotification";
                                                                 views:bindings];
         [self addConstraints:constraints];
         [self layoutIfNeeded];
-        
-        // Cooking listeners
-        self.mObservers = [NSMutableSet set];
-        
-        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        __block __weak typeof(self) weakSelf = self;
-        
-        id<NSObject> observer = [center addObserverForName:kATERCVideoStartNotification
-                                                    object:nil
-                                                     queue:nil
-                                                usingBlock:^(NSNotification *note) {
-                                                    NSObject *cell = note.userInfo[@"cell"];
-                                                    if (weakSelf != cell) {
-                                                        [weakSelf.mMoviePlayer pause];
-                                                    }
-                                                }];
-        [self.mObservers addObject:observer];
-        
-        observer = [center addObserverForName:MPMoviePlayerPlaybackStateDidChangeNotification
-                                       object:nil
-                                        queue:nil
-                                   usingBlock:^(NSNotification *note) {
-                                       NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-                                       MPMoviePlaybackState playbackStatus = weakSelf.mMoviePlayer.playbackState;
-                                       switch (playbackStatus) {
-                                           case MPMoviePlaybackStateStopped:
-                                               break;
-                                           case MPMoviePlaybackStatePlaying: {
-                                               [center postNotificationName:kATERCVideoStartNotification object:nil userInfo:@{@"cell":weakSelf}];
-//                                               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                                                   [weakSelf.mMoviePlayer play];
-//                                               });
-                                               break;
-                                           }
-                                           case MPMoviePlaybackStatePaused:
-                                               break;
-                                           case MPMoviePlaybackStateInterrupted:
-                                               break;
-                                           case MPMoviePlaybackStateSeekingForward:
-                                               break;
-                                           case MPMoviePlaybackStateSeekingBackward:
-                                               break;
-                                           default:
-                                               break;
-                                       }
-                                   }];
-        [self.mObservers addObject:observer];
     }
-    
+}
+
+- (void) drawContent:(ATERCVideo *) content {
     [self.mMoviePlayer pause];
     [self.mMoviePlayer setContentURL:[NSURL URLWithString:content.mVideoUrl]];
     [self.mMoviePlayer prepareToPlay];
@@ -131,13 +82,9 @@ static NSString *kATERCVideoStartNotification = @"kATERCVideoStartNotification";
 }
 
 #pragma mark - -------------------- LIFECICLE ---------------------
-
-- (void) dealloc {
-    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    for (id<NSObject> observer in self.mObservers) {
-        [center removeObserver:observer];
-    }
-    [self.mObservers removeAllObjects];
+- (void) awakeFromNib {
+    [super awakeFromNib];
+    [self mountViews];
 }
 
 @end

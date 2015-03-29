@@ -61,7 +61,6 @@
     NSInteger numberOfViewers = 6;
     NSInteger viewer = arc4random() % numberOfViewers;
     
-    viewer = 5;
     ATERC *rc = nil;
     if (viewer == 0) {
         rc = [[ATERCLabel alloc] init];
