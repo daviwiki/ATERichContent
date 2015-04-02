@@ -23,6 +23,10 @@
 		461B966B1ABEE5C90089178B /* ATERCVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B966A1ABEE5C90089178B /* ATERCVideo.m */; };
 		461B966F1ABEE6630089178B /* ATERCVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B966E1ABEE6630089178B /* ATERCVideoView.m */; };
 		461B96711ABEE6770089178B /* ATERCVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B96701ABEE6770089178B /* ATERCVideoView.xib */; };
+		462E36591ACDAF830075B951 /* ATERCOverrideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E36581ACDAF830075B951 /* ATERCOverrideCell.m */; };
+		462E365C1ACDAF910075B951 /* ATERCCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E365B1ACDAF910075B951 /* ATERCCustomCell.m */; };
+		462E365E1ACDAFA50075B951 /* ATERCOverrideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462E365D1ACDAFA50075B951 /* ATERCOverrideCell.xib */; };
+		462E36601ACDAFB00075B951 /* ATERCCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462E365F1ACDAFB00075B951 /* ATERCCustomCell.xib */; };
 		4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE891AA4DBFF00AE3A2B /* main.m */; };
 		4632BE8D1AA4DBFF00AE3A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8C1AA4DBFF00AE3A2B /* AppDelegate.m */; };
 		4632BE901AA4DBFF00AE3A2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4632BE8F1AA4DBFF00AE3A2B /* ViewController.m */; };
@@ -83,6 +87,12 @@
 		461B966D1ABEE6630089178B /* ATERCVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCVideoView.h; sourceTree = "<group>"; };
 		461B966E1ABEE6630089178B /* ATERCVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCVideoView.m; sourceTree = "<group>"; };
 		461B96701ABEE6770089178B /* ATERCVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCVideoView.xib; sourceTree = "<group>"; };
+		462E36571ACDAF830075B951 /* ATERCOverrideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCOverrideCell.h; sourceTree = "<group>"; };
+		462E36581ACDAF830075B951 /* ATERCOverrideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCOverrideCell.m; sourceTree = "<group>"; };
+		462E365A1ACDAF910075B951 /* ATERCCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATERCCustomCell.h; sourceTree = "<group>"; };
+		462E365B1ACDAF910075B951 /* ATERCCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATERCCustomCell.m; sourceTree = "<group>"; };
+		462E365D1ACDAFA50075B951 /* ATERCOverrideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCOverrideCell.xib; sourceTree = "<group>"; };
+		462E365F1ACDAFB00075B951 /* ATERCCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATERCCustomCell.xib; sourceTree = "<group>"; };
 		4632BE841AA4DBFF00AE3A2B /* ATERichContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATERichContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4632BE881AA4DBFF00AE3A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4632BE891AA4DBFF00AE3A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -225,6 +235,19 @@
 			path = video;
 			sourceTree = "<group>";
 		};
+		462E36561ACDAE4B0075B951 /* customcells */ = {
+			isa = PBXGroup;
+			children = (
+				462E36571ACDAF830075B951 /* ATERCOverrideCell.h */,
+				462E36581ACDAF830075B951 /* ATERCOverrideCell.m */,
+				462E365D1ACDAFA50075B951 /* ATERCOverrideCell.xib */,
+				462E365A1ACDAF910075B951 /* ATERCCustomCell.h */,
+				462E365B1ACDAF910075B951 /* ATERCCustomCell.m */,
+				462E365F1ACDAFB00075B951 /* ATERCCustomCell.xib */,
+			);
+			path = customcells;
+			sourceTree = "<group>";
+		};
 		4632BE7B1AA4DBFF00AE3A2B = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +381,7 @@
 		467B56011AC8549000C56B06 /* ATESamples */ = {
 			isa = PBXGroup;
 			children = (
+				462E36561ACDAE4B0075B951 /* customcells */,
 				467B56021AC854FA00C56B06 /* ATERandomViewController.h */,
 				467B56031AC854FA00C56B06 /* ATERandomViewController.m */,
 				467B56051AC855E400C56B06 /* ATECustomComponentsViewController.h */,
@@ -466,6 +490,7 @@
 			files = (
 				4632BE931AA4DBFF00AE3A2B /* Main.storyboard in Resources */,
 				461B96631ABEDEDF0089178B /* ATERCWebView.xib in Resources */,
+				462E365E1ACDAFA50075B951 /* ATERCOverrideCell.xib in Resources */,
 				4632BE981AA4DBFF00AE3A2B /* LaunchScreen.xib in Resources */,
 				461B96681ABEE04B0089178B /* ATERCGalleryCollectionViewCell.xib in Resources */,
 				461B96711ABEE6770089178B /* ATERCVideoView.xib in Resources */,
@@ -473,6 +498,7 @@
 				461B965F1ABEDEDF0089178B /* ATERCGalleryImageView.xib in Resources */,
 				461B96611ABEDEDF0089178B /* ATERCLabelView.xib in Resources */,
 				4632BE951AA4DBFF00AE3A2B /* Images.xcassets in Resources */,
+				462E36601ACDAFB00075B951 /* ATERCCustomCell.xib in Resources */,
 				461B965B1ABEDEDF0089178B /* ATERCAttributedLabelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4632BEC31AA4E5D100AE3A2B /* ATERCHelper.m in Sources */,
+				462E36591ACDAF830075B951 /* ATERCOverrideCell.m in Sources */,
 				468D06BD1AA8C03900DF59B2 /* ATERCAttributtedLabel.m in Sources */,
 				468D06C31AA8C07800DF59B2 /* ATERCGallery.m in Sources */,
 				46420F641ABAD885004D7845 /* ATERCManager.m in Sources */,
@@ -511,6 +538,7 @@
 				4632BEC01AA4DE8900AE3A2B /* ATERCConstants.m in Sources */,
 				461B966F1ABEE6630089178B /* ATERCVideoView.m in Sources */,
 				461B965E1ABEDEDF0089178B /* ATERCGalleryImageView.m in Sources */,
+				462E365C1ACDAF910075B951 /* ATERCCustomCell.m in Sources */,
 				4632BE8A1AA4DBFF00AE3A2B /* main.m in Sources */,
 				46420F671ABAD96C004D7845 /* ATERCLog.m in Sources */,
 				46CDDC881ABDEE3700DF38A3 /* ATEImageView.m in Sources */,

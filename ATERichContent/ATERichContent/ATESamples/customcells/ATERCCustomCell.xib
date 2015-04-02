@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CUSTOM" id="kkS-uX-mLe" customClass="ATERCCustomCell">
+            <rect key="frame" x="0.0" y="0.0" width="301" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="301" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uX7-xx-Ev5" userLabel="View - Background">
+                        <rect key="frame" x="0.0" y="0.0" width="301" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fp-Wd-dPW" userLabel="Label - title">
+                                <rect key="frame" x="8" y="8" width="285" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq7-Rd-jgP" userLabel="Label - subtitle">
+                                <rect key="frame" x="8" y="43" width="285" height="69"/>
+                                <string key="text">subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle  subtitle subtitle subtitle subtitle subtitle </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8fp-Wd-dPW" secondAttribute="trailing" constant="8" id="3sU-ke-aS3"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Kq7-Rd-jgP" secondAttribute="bottom" constant="8" id="5zy-UU-Aok"/>
+                            <constraint firstItem="8fp-Wd-dPW" firstAttribute="top" secondItem="uX7-xx-Ev5" secondAttribute="top" constant="8" id="6s8-ke-Nzb"/>
+                            <constraint firstAttribute="trailing" secondItem="Kq7-Rd-jgP" secondAttribute="trailing" constant="8" id="Eol-jL-UZI"/>
+                            <constraint firstItem="Kq7-Rd-jgP" firstAttribute="top" secondItem="8fp-Wd-dPW" secondAttribute="bottom" constant="8" id="abB-jq-bxQ"/>
+                            <constraint firstItem="Kq7-Rd-jgP" firstAttribute="leading" secondItem="uX7-xx-Ev5" secondAttribute="leading" constant="8" id="bZx-4L-7M7"/>
+                            <constraint firstItem="8fp-Wd-dPW" firstAttribute="leading" secondItem="uX7-xx-Ev5" secondAttribute="leading" constant="8" id="reL-nM-hzq"/>
+                            <constraint firstAttribute="bottom" secondItem="8fp-Wd-dPW" secondAttribute="bottom" id="ww5-A5-cE0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ww5-A5-cE0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uX7-xx-Ev5" secondAttribute="bottom" id="6hL-xj-hyp"/>
+                <constraint firstItem="uX7-xx-Ev5" firstAttribute="top" secondItem="kkS-uX-mLe" secondAttribute="top" id="Rxc-CC-G3k"/>
+                <constraint firstAttribute="trailing" secondItem="uX7-xx-Ev5" secondAttribute="trailing" id="TSN-aD-ylb"/>
+                <constraint firstItem="uX7-xx-Ev5" firstAttribute="leading" secondItem="kkS-uX-mLe" secondAttribute="leading" id="UzT-ae-Ocl"/>
+            </constraints>
+            <size key="customSize" width="301" height="50"/>
+            <connections>
+                <outlet property="mBackgroundView" destination="uX7-xx-Ev5" id="5c0-Y2-g5z"/>
+                <outlet property="mSubtitleLabel" destination="Kq7-Rd-jgP" id="Dr8-Ii-9yP"/>
+                <outlet property="mTitleLabel" destination="8fp-Wd-dPW" id="zX2-O6-kf7"/>
+            </connections>
+            <point key="canvasLocation" x="283.5" y="235"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TXT" id="4rd-eq-vAU" customClass="ATERCOverrideCell">
+            <rect key="frame" x="0.0" y="0.0" width="301" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="301" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mY-s6-lyp" userLabel="View - Background">
+                        <rect key="frame" x="0.0" y="0.0" width="301" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-rn-O4C" userLabel="Label - title">
+                                <rect key="frame" x="8" y="8" width="285" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOO-bz-HgN" userLabel="Label - subtitle">
+                                <rect key="frame" x="8" y="43" width="285" height="69"/>
+                                <string key="text">subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle  subtitle subtitle subtitle subtitle subtitle </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DOO-bz-HgN" firstAttribute="top" secondItem="Gmf-rn-O4C" secondAttribute="bottom" constant="8" id="JW3-NJ-r66"/>
+                            <constraint firstAttribute="trailing" secondItem="DOO-bz-HgN" secondAttribute="trailing" constant="8" id="N9w-zp-keh"/>
+                            <constraint firstItem="Gmf-rn-O4C" firstAttribute="top" secondItem="7mY-s6-lyp" secondAttribute="top" constant="8" id="XC0-TT-p4h"/>
+                            <constraint firstAttribute="bottom" secondItem="Gmf-rn-O4C" secondAttribute="bottom" id="YSn-t0-6mf"/>
+                            <constraint firstItem="DOO-bz-HgN" firstAttribute="leading" secondItem="7mY-s6-lyp" secondAttribute="leading" constant="8" id="fFD-R4-hhq"/>
+                            <constraint firstAttribute="trailing" secondItem="Gmf-rn-O4C" secondAttribute="trailing" constant="8" id="jWl-I0-twe"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DOO-bz-HgN" secondAttribute="bottom" constant="8" id="uvL-VB-wLe"/>
+                            <constraint firstItem="Gmf-rn-O4C" firstAttribute="leading" secondItem="7mY-s6-lyp" secondAttribute="leading" constant="8" id="y5n-HQ-ZA6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YSn-t0-6mf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7mY-s6-lyp" secondAttribute="trailing" id="113-9b-PzQ"/>
+                <constraint firstItem="7mY-s6-lyp" firstAttribute="top" secondItem="4rd-eq-vAU" secondAttribute="top" id="dI1-bh-hs1"/>
+                <constraint firstItem="7mY-s6-lyp" firstAttribute="leading" secondItem="4rd-eq-vAU" secondAttribute="leading" id="okc-DB-zxz"/>
+                <constraint firstAttribute="bottom" secondItem="7mY-s6-lyp" secondAttribute="bottom" id="sHd-F5-aMU"/>
+            </constraints>
+            <size key="customSize" width="301" height="50"/>
+            <connections>
+                <outlet property="mBackgroundView" destination="7mY-s6-lyp" id="Xip-5w-0DJ"/>
+                <outlet property="mSubtitleLabel" destination="DOO-bz-HgN" id="WVs-Al-7Mr"/>
+                <outlet property="mTitleLabel" destination="Gmf-rn-O4C" id="qKz-z4-kqy"/>
+            </connections>
+            <point key="canvasLocation" x="283.5" y="235"/>
+        </collectionViewCell>
+    </objects>
+</document>
