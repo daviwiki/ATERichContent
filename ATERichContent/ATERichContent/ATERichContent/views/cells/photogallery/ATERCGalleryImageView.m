@@ -32,6 +32,9 @@ CGFloat kATERCGalleryCollectionInset = 8.0;
     // Config page control
     self.mImagesPageControl.numberOfPages = content.mImagesUrl.count;
     
+    // Scroll offset zero
+    self.mImagesCollectionView.contentOffset = CGPointZero;
+    
     // Display images
     [self.mImagesCollectionView reloadData];
 }
