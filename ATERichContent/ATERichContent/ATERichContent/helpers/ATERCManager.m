@@ -154,6 +154,10 @@ static ATERCManager *stInstance;
     return self.mViewAliases;
 }
 
+- (void) restoreComponentsToDefault {
+    [self initializeManager];
+}
+
 - (void) setEnableLogs:(BOOL) enableLogs {
     [ATERCLog setEnableLogs:enableLogs];
 }

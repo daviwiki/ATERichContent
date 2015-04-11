@@ -66,6 +66,16 @@
  * the "ATERCView" class, the new alias won't
  * be saved
  * @note examine logs to obtain more information if process failed
+ * @code
+ * // Here an example. Next code register the 
+ * // default video component
+ * c = [[ATERCComponent alloc] init];
+ * c.mName = NSStringFromClass([ATERCVideoView class]);
+ * c.mType = ATERCComponentTypeNib;
+ * c.mAlias = kATERCTypeVideo;
+ * c.mReuseId = kATERCTypeVideo;
+ * [self addRichViewComponent:c];
+ * @endcode
  * @param component, not null
  * @return Return YES if the operation finish successfully
  */
@@ -79,6 +89,14 @@
  * system</p>
  */
 - (NSDictionary *) getAvailableCompontents;
+
+/**
+ * @function
+ * restoreComponentsToDefault
+ * @brief Remove all components registered by user and restore 
+ * the default ones.
+ */
+- (void) restoreComponentsToDefault;
 
 /**
  * @function setEnableLogs
