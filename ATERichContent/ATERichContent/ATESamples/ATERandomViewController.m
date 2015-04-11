@@ -135,6 +135,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self mountStubs];
+    [[ATERCManager getInstance] restoreComponentsToDefault];
 }
 
 - (void)didReceiveMemoryWarning {

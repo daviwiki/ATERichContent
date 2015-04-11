@@ -15,8 +15,7 @@
 @property (nonatomic, weak) IBOutlet UIView *mBackgroundView;
 
 /**
- * @function
- * getHeightForContent:andComponent:
+ * @function getHeightForContent:andComponent:
  * @brief <p>Returnt the contents height 
  * for the content given</p>
  * @note <p>If something goes wrong, return 0</p>
@@ -27,23 +26,17 @@
 + (NSNumber *) getHeightForContent:(ATERC *) content;
 
 /**
- * @function
- * validateContent:
+ * @function validateContent:
  * @brief
  * <p>Define if 'content' is a valid instance for
- * the ATERCView instance</p>
- * @note <p>Must be override by subclasses to define the
- * the height for the content</p>
+ * this ATERCView instance</p>
  */
 - (BOOL) validateContent:(ATERC *) content;
 
 /**
- * @function
- * showContent:
+ * @function showContent:
  * @brief
  * <p>Display the content given</p>
- * @note <p>Must be override by subclasses to define the
- * the height for the content</p>
  */
 - (void) showContent:(ATERC *) content;
 
