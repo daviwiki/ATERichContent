@@ -8,6 +8,8 @@
 
 #import "ATERCConstants.h"
 
+NSString *kATERCVersion = @"1.0.1";
+
 CGFloat kATERCWrapContentHeight = -1;
 
 NSString *kATERCTypeLabel = @"TXT";

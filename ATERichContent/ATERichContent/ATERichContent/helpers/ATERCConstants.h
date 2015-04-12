@@ -15,6 +15,11 @@ typedef NS_OPTIONS(NSInteger, ATERCComponentType) {
 };
 
 ///
+/// ATERCVView Version
+///
+extern NSString *kATERCVersion;
+
+///
 /// ATERCView Properties
 ///
 extern CGFloat kATERCWrapContentHeight;
