@@ -1,0 +1,9 @@
+v1.0.1
+- First implementation
+- Cells available:
+	* Simple label
+	* Attributed label
+	* Single image
+	* Image Gallery
+	* Single Video
+	* Webview
